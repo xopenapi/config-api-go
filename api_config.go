@@ -25,6 +25,7 @@ var (
 // ConfigApiService ConfigApi service
 type ConfigApiService service
 
+
 /*
 Create 创建配置
 创建配置

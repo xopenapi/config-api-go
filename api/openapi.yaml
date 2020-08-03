@@ -1,0 +1,133 @@
+openapi: 3.0.1
+info:
+  description: 配置服务服务端API.
+  license:
+    name: Apache-2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  title: 配置服务服务端API
+  version: 1.0.0
+servers:
+- url: https://config.api.lucfish.com/
+tags:
+- description: ""
+  name: config
+paths:
+  /config/create:
+    post:
+      description: 创建配置
+      operationId: create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateConfigReq'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/APIResponse_Config'
+          description: successful operation
+      summary: 创建配置
+      tags:
+      - config
+      x-codegen-request-body-name: body
+  /config/update:
+    post:
+      description: 更新配置
+      operationId: update
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateConfigReq'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/APIResponse_Config'
+          description: successful operation
+      summary: 更新配置
+      tags:
+      - config
+      x-codegen-request-body-name: body
+components:
+  schemas:
+    CreateConfigReq:
+      example:
+        referId: referId
+        tenantId: tenantId
+        templateId: 0
+        value: value
+        key: key
+      properties:
+        tenantId:
+          type: string
+        referId:
+          type: string
+        templateId:
+          format: int64
+          type: integer
+        key:
+          type: string
+        value:
+          type: string
+      title: CreateConfigReq
+      type: object
+    APIResponse_Config:
+      allOf:
+      - $ref: '#/components/schemas/APIResponse'
+      - $ref: '#/components/schemas/APIResponse_Config_allOf'
+    UpdateConfigReq:
+      example:
+        id: 0
+        value: value
+      properties:
+        id:
+          format: int64
+          type: integer
+        value:
+          type: string
+      title: UpdateConfigReq
+      type: object
+    UpdateConfigRsp:
+      title: UpdateConfigRsp
+      type: object
+    Config:
+      properties:
+        id:
+          format: int64
+          type: integer
+        tenantId:
+          type: string
+        referId:
+          type: string
+        templateId:
+          format: int64
+          type: integer
+        key:
+          type: string
+        value:
+          type: string
+        ctime:
+          format: int64
+          type: integer
+        mtime:
+          format: int64
+          type: integer
+      type: object
+    APIResponse:
+      properties:
+        errcode:
+          format: int32
+          type: integer
+        errmsg:
+          type: string
+      type: object
+    APIResponse_Config_allOf:
+      properties:
+        data:
+          $ref: '#/components/schemas/Config'

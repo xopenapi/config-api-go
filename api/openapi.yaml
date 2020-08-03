@@ -54,12 +54,12 @@ paths:
       tags:
       - config
       x-codegen-request-body-name: body
-  /config/{appId}/{key}:
+  /config/{referId}/{key}:
     get:
-      operationId: findByAppIdAndKey
+      operationId: findByReferIdAndKey
       parameters:
       - in: path
-        name: appId
+        name: referId
         required: true
         schema:
           type: string
@@ -75,7 +75,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ConfigAPIResponse'
           description: successful operation
-      summary: 根据key查找
+      summary: 根据referId 和 key查找
       tags:
       - config
 components:

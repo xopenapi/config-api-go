@@ -33,7 +33,7 @@ All URIs are relative to *https://config.api.lucfish.com*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ConfigApi* | [**Create**](docs/ConfigApi.md#create) | **Post** /config/create | 创建配置
-*ConfigApi* | [**FindByAppIdAndKey**](docs/ConfigApi.md#findbyappidandkey) | **Get** /config/{appId}/{key} | 根据key查找
+*ConfigApi* | [**FindByReferIdAndKey**](docs/ConfigApi.md#findbyreferidandkey) | **Get** /config/{referId}/{key} | 根据referId 和 key查找
 *ConfigApi* | [**Update**](docs/ConfigApi.md#update) | **Post** /config/update | 更新配置
 
 

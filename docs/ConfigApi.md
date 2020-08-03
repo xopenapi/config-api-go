@@ -5,7 +5,7 @@ All URIs are relative to *https://config.api.lucfish.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**Create**](ConfigApi.md#Create) | **Post** /config/create | 创建配置
-[**FindByAppIdAndKey**](ConfigApi.md#FindByAppIdAndKey) | **Get** /config/{appId}/{key} | 根据key查找
+[**FindByReferIdAndKey**](ConfigApi.md#FindByReferIdAndKey) | **Get** /config/{referId}/{key} | 根据referId 和 key查找
 [**Update**](ConfigApi.md#Update) | **Post** /config/update | 更新配置
 
 
@@ -44,11 +44,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## FindByAppIdAndKey
+## FindByReferIdAndKey
 
-> ConfigApiResponse FindByAppIdAndKey(ctx, appId, key)
+> ConfigApiResponse FindByReferIdAndKey(ctx, referId, key)
 
-根据key查找
+根据referId 和 key查找
 
 ### Required Parameters
 
@@ -56,7 +56,7 @@ No authorization required
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**appId** | **string**|  | 
+**referId** | **string**|  | 
 **key** | **string**|  | 
 
 ### Return type

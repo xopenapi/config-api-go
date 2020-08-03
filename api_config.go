@@ -104,13 +104,13 @@ func (a *ConfigApiService) Create(ctx _context.Context, body CreateConfigReq) (A
 }
 
 /*
-FindByAppIdAndKey 根据key查找
+FindByReferIdAndKey 根据referId 和 key查找
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param appId
+ * @param referId
  * @param key
 @return ConfigApiResponse
 */
-func (a *ConfigApiService) FindByAppIdAndKey(ctx _context.Context, appId string, key string) (ConfigApiResponse, *_nethttp.Response, error) {
+func (a *ConfigApiService) FindByReferIdAndKey(ctx _context.Context, referId string, key string) (ConfigApiResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
@@ -121,8 +121,8 @@ func (a *ConfigApiService) FindByAppIdAndKey(ctx _context.Context, appId string,
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/config/{appId}/{key}"
-	localVarPath = strings.Replace(localVarPath, "{"+"appId"+"}", _neturl.PathEscape(parameterToString(appId, "")) , -1)
+	localVarPath := a.client.cfg.BasePath + "/config/{referId}/{key}"
+	localVarPath = strings.Replace(localVarPath, "{"+"referId"+"}", _neturl.PathEscape(parameterToString(referId, "")) , -1)
 
 	localVarPath = strings.Replace(localVarPath, "{"+"key"+"}", _neturl.PathEscape(parameterToString(key, "")) , -1)
 

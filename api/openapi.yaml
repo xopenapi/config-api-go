@@ -48,12 +48,36 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/APIResponse_Config'
+                $ref: '#/components/schemas/ConfigAPIResponse'
           description: successful operation
       summary: 更新配置
       tags:
       - config
       x-codegen-request-body-name: body
+  /config/{appId}/{key}:
+    get:
+      operationId: findByAppIdAndKey
+      parameters:
+      - in: path
+        name: appId
+        required: true
+        schema:
+          type: string
+      - in: path
+        name: key
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConfigAPIResponse'
+          description: successful operation
+      summary: 根据key查找
+      tags:
+      - config
 components:
   schemas:
     CreateConfigReq:
@@ -77,10 +101,10 @@ components:
           type: string
       title: CreateConfigReq
       type: object
-    APIResponse_Config:
+    ConfigAPIResponse:
       allOf:
       - $ref: '#/components/schemas/APIResponse'
-      - $ref: '#/components/schemas/APIResponse_Config_allOf'
+      - $ref: '#/components/schemas/ConfigAPIResponse_allOf'
     UpdateConfigReq:
       example:
         id: 0
@@ -127,7 +151,7 @@ components:
         errmsg:
           type: string
       type: object
-    APIResponse_Config_allOf:
+    ConfigAPIResponse_allOf:
       properties:
         data:
           $ref: '#/components/schemas/Config'

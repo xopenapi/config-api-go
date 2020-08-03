@@ -33,15 +33,16 @@ All URIs are relative to *https://config.api.lucfish.com*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ConfigApi* | [**Create**](docs/ConfigApi.md#create) | **Post** /config/create | 创建配置
+*ConfigApi* | [**FindByAppIdAndKey**](docs/ConfigApi.md#findbyappidandkey) | **Get** /config/{appId}/{key} | 根据key查找
 *ConfigApi* | [**Update**](docs/ConfigApi.md#update) | **Post** /config/update | 更新配置
 
 
 ## Documentation For Models
 
  - [ApiResponse](docs/ApiResponse.md)
- - [ApiResponseConfig](docs/ApiResponseConfig.md)
- - [ApiResponseConfigAllOf](docs/ApiResponseConfigAllOf.md)
  - [Config](docs/Config.md)
+ - [ConfigApiResponse](docs/ConfigApiResponse.md)
+ - [ConfigApiResponseAllOf](docs/ConfigApiResponseAllOf.md)
  - [CreateConfigReq](docs/CreateConfigReq.md)
  - [UpdateConfigReq](docs/UpdateConfigReq.md)
 

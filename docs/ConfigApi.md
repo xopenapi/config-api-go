@@ -5,6 +5,7 @@ All URIs are relative to *https://config.api.lucfish.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**Create**](ConfigApi.md#Create) | **Post** /config/create | 创建配置
+[**FindByAppIdAndKey**](ConfigApi.md#FindByAppIdAndKey) | **Get** /config/{appId}/{key} | 根据key查找
 [**Update**](ConfigApi.md#Update) | **Post** /config/update | 更新配置
 
 
@@ -43,9 +44,42 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## FindByAppIdAndKey
+
+> ConfigApiResponse FindByAppIdAndKey(ctx, appId, key)
+
+根据key查找
+
+### Required Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**appId** | **string**|  | 
+**key** | **string**|  | 
+
+### Return type
+
+[**ConfigApiResponse**](ConfigAPIResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## Update
 
-> ApiResponseConfig Update(ctx, body)
+> ConfigApiResponse Update(ctx, body)
 
 更新配置
 
@@ -61,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApiResponseConfig**](APIResponse_Config.md)
+[**ConfigApiResponse**](ConfigAPIResponse.md)
 
 ### Authorization
 

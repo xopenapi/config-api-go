@@ -8,8 +8,8 @@
  */
 
 package config
-// ApiResponseConfig struct for ApiResponseConfig
-type ApiResponseConfig struct {
+// ConfigApiResponse struct for ConfigApiResponse
+type ConfigApiResponse struct {
 	Errcode int32 `json:"errcode,omitempty"`
 	Errmsg string `json:"errmsg,omitempty"`
 	Data Config `json:"data,omitempty"`

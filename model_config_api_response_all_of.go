@@ -8,7 +8,7 @@
  */
 
 package config
-// ApiResponseConfigAllOf struct for ApiResponseConfigAllOf
-type ApiResponseConfigAllOf struct {
+// ConfigApiResponseAllOf struct for ConfigApiResponseAllOf
+type ConfigApiResponseAllOf struct {
 	Data Config `json:"data,omitempty"`
 }

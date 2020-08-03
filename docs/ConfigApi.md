@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## Create
 
-> ApiResponseConfig Create(ctx, body)
+> ConfigApiResponse Create(ctx, body)
 
 创建配置
 
@@ -28,7 +28,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApiResponseConfig**](APIResponse_Config.md)
+[**ConfigApiResponse**](ConfigAPIResponse.md)
 
 ### Authorization
 

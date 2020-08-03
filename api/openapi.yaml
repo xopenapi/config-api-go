@@ -27,7 +27,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/APIResponse_Config'
+                $ref: '#/components/schemas/ConfigAPIResponse'
           description: successful operation
       summary: 创建配置
       tags:

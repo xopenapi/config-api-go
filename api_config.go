@@ -30,16 +30,16 @@ Create 创建配置
 创建配置
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param body
-@return ApiResponseConfig
+@return ConfigApiResponse
 */
-func (a *ConfigApiService) Create(ctx _context.Context, body CreateConfigReq) (ApiResponseConfig, *_nethttp.Response, error) {
+func (a *ConfigApiService) Create(ctx _context.Context, body CreateConfigReq) (ConfigApiResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  ApiResponseConfig
+		localVarReturnValue  ConfigApiResponse
 	)
 
 	// create path and map variables

@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## ConfigGroupBatchDeletePost
 
-> InlineResponse200 ConfigGroupBatchDeletePost(ctx, optional)
+> DeleteRsp ConfigGroupBatchDeletePost(ctx, optional)
 
 批量删除组
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](inline_response_200.md)
+[**DeleteRsp**](DeleteRsp.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ## ConfigGroupIdDelete
 
-> InlineResponse200 ConfigGroupIdDelete(ctx, id)
+> DeleteRsp ConfigGroupIdDelete(ctx, id)
 
 删除组
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](inline_response_200.md)
+[**DeleteRsp**](DeleteRsp.md)
 
 ### Authorization
 

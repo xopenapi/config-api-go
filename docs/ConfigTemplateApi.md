@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 ## ConfigTemplateBatchDeletePost
 
-> InlineResponse200 ConfigTemplateBatchDeletePost(ctx, optional)
+> DeleteRsp ConfigTemplateBatchDeletePost(ctx, optional)
 
 批量删除配置模版
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](inline_response_200.md)
+[**DeleteRsp**](DeleteRsp.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ## ConfigTemplateIdDelete
 
-> InlineResponse200 ConfigTemplateIdDelete(ctx, id)
+> DeleteRsp ConfigTemplateIdDelete(ctx, id)
 
 删除配置模版
 
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](inline_response_200.md)
+[**DeleteRsp**](DeleteRsp.md)
 
 ### Authorization
 

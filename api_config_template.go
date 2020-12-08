@@ -37,16 +37,16 @@ ConfigTemplateBatchDeletePost 批量删除配置模版
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ConfigTemplateBatchDeletePostOpts - Optional Parameters:
  * @param "IdsReq" (optional.Interface of IdsReq) - 
-@return InlineResponse200
+@return DeleteRsp
 */
-func (a *ConfigTemplateApiService) ConfigTemplateBatchDeletePost(ctx _context.Context, localVarOptionals *ConfigTemplateBatchDeletePostOpts) (InlineResponse200, *_nethttp.Response, error) {
+func (a *ConfigTemplateApiService) ConfigTemplateBatchDeletePost(ctx _context.Context, localVarOptionals *ConfigTemplateBatchDeletePostOpts) (DeleteRsp, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse200
+		localVarReturnValue  DeleteRsp
 	)
 
 	// create path and map variables
@@ -472,16 +472,16 @@ ConfigTemplateIdDelete 删除配置模版
 删除配置模版
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id 删除配置模版
-@return InlineResponse200
+@return DeleteRsp
 */
-func (a *ConfigTemplateApiService) ConfigTemplateIdDelete(ctx _context.Context, id string) (InlineResponse200, *_nethttp.Response, error) {
+func (a *ConfigTemplateApiService) ConfigTemplateIdDelete(ctx _context.Context, id string) (DeleteRsp, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodDelete
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse200
+		localVarReturnValue  DeleteRsp
 	)
 
 	// create path and map variables

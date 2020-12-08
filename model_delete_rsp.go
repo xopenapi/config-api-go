@@ -8,9 +8,10 @@
  */
 
 package config
-// InlineResponse2001 struct for InlineResponse2001
-type InlineResponse2001 struct {
+// DeleteRsp struct for DeleteRsp
+type DeleteRsp struct {
 	Code int64 `json:"code,omitempty"`
 	Msg string `json:"msg,omitempty"`
-	Data []Config `json:"data,omitempty"`
+	// 暂时未返回数据
+	Data *interface{} `json:"data,omitempty"`
 }

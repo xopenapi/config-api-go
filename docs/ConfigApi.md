@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 ## ConfigBatchDeletePost
 
-> InlineResponse200 ConfigBatchDeletePost(ctx, optional)
+> DeleteRsp ConfigBatchDeletePost(ctx, optional)
 
 批量删除配置
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](inline_response_200.md)
+[**DeleteRsp**](DeleteRsp.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ## ConfigBatchRetrieveByResourcesPost
 
-> InlineResponse2001 ConfigBatchRetrieveByResourcesPost(ctx, optional)
+> InlineResponse200 ConfigBatchRetrieveByResourcesPost(ctx, optional)
 
 查询配置
 
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](inline_response_200_1.md)
+[**InlineResponse200**](inline_response_200.md)
 
 ### Authorization
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## ConfigIdDelete
 
-> InlineResponse200 ConfigIdDelete(ctx, id)
+> DeleteRsp ConfigIdDelete(ctx, id)
 
 删除配置
 
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](inline_response_200.md)
+[**DeleteRsp**](DeleteRsp.md)
 
 ### Authorization
 

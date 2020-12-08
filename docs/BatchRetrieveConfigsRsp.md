@@ -1,4 +1,4 @@
-# InlineResponse2001
+# BatchRetrieveConfigsRsp
 
 ## Properties
 

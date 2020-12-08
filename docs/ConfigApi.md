@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 ## ConfigBatchDeletePost
 
-> InlineResponse2001 ConfigBatchDeletePost(ctx, optional)
+> InlineResponse200 ConfigBatchDeletePost(ctx, optional)
 
 批量删除配置
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](inline_response_200_1.md)
+[**InlineResponse200**](inline_response_200.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ## ConfigBatchRetrieveByKeysPost
 
-> InlineResponse2002 ConfigBatchRetrieveByKeysPost(ctx, optional)
+> BatchRetrieveConfigsByKeysRsp ConfigBatchRetrieveByKeysPost(ctx, optional)
 
 查询配置
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](inline_response_200_2.md)
+[**BatchRetrieveConfigsByKeysRsp**](BatchRetrieveConfigsByKeysRsp.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ## ConfigBatchRetrieveByResourcesPost
 
-> InlineResponse2002 ConfigBatchRetrieveByResourcesPost(ctx, optional)
+> InlineResponse2001 ConfigBatchRetrieveByResourcesPost(ctx, optional)
 
 查询配置
 
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](inline_response_200_2.md)
+[**InlineResponse2001**](inline_response_200_1.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 ## ConfigBatchRetrievePost
 
-> InlineResponse2002 ConfigBatchRetrievePost(ctx, optional)
+> BatchRetrieveConfigsRsp ConfigBatchRetrievePost(ctx, optional)
 
 批量查询配置
 
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](inline_response_200_2.md)
+[**BatchRetrieveConfigsRsp**](BatchRetrieveConfigsRsp.md)
 
 ### Authorization
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ## ConfigCursorPost
 
-> InlineResponse2004 ConfigCursorPost(ctx, optional)
+> CursorConfigsRsp ConfigCursorPost(ctx, optional)
 
 Cursor查询配置
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](inline_response_200_4.md)
+[**CursorConfigsRsp**](CursorConfigsRsp.md)
 
 ### Authorization
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## ConfigIdDelete
 
-> InlineResponse2001 ConfigIdDelete(ctx, id)
+> InlineResponse200 ConfigIdDelete(ctx, id)
 
 删除配置
 
@@ -249,40 +249,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **id** | **string**| 删除配置 | 
-
-### Return type
-
-[**InlineResponse2001**](inline_response_200_1.md)
-
-### Authorization
-
-[ApiKey](../README.md#ApiKey)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## ConfigIdGet
-
-> InlineResponse200 ConfigIdGet(ctx, id)
-
-查询配置
-
-查询配置通过配置ID
-
-### Required Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string**| 查询配置通过配置ID | 
 
 ### Return type
 
@@ -302,9 +268,43 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## ConfigIdGet
+
+> GetConfigRsp ConfigIdGet(ctx, id)
+
+查询配置
+
+查询配置通过配置ID
+
+### Required Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string**| 查询配置通过配置ID | 
+
+### Return type
+
+[**GetConfigRsp**](GetConfigRsp.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## ConfigPagePost
 
-> InlineResponse2003 ConfigPagePost(ctx, optional)
+> PageConfigsRsp ConfigPagePost(ctx, optional)
 
 Page查询配置
 
@@ -329,7 +329,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](inline_response_200_3.md)
+[**PageConfigsRsp**](PageConfigsRsp.md)
 
 ### Authorization
 
@@ -347,7 +347,7 @@ Name | Type | Description  | Notes
 
 ## ConfigPost
 
-> InlineResponse200 ConfigPost(ctx, optional)
+> CreateConfigRsp ConfigPost(ctx, optional)
 
 创建配置
 
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](inline_response_200.md)
+[**CreateConfigRsp**](CreateConfigRsp.md)
 
 ### Authorization
 
@@ -390,7 +390,7 @@ Name | Type | Description  | Notes
 
 ## ConfigPut
 
-> InlineResponse200 ConfigPut(ctx, optional)
+> UpdateConfigRsp ConfigPut(ctx, optional)
 
 更新配置
 
@@ -415,7 +415,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](inline_response_200.md)
+[**UpdateConfigRsp**](UpdateConfigRsp.md)
 
 ### Authorization
 
@@ -433,7 +433,7 @@ Name | Type | Description  | Notes
 
 ## ConfigRetrieveByKeyPost
 
-> InlineResponse200 ConfigRetrieveByKeyPost(ctx, optional)
+> RetrieveConfigByKeyRsp ConfigRetrieveByKeyPost(ctx, optional)
 
 查询配置
 
@@ -458,7 +458,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](inline_response_200.md)
+[**RetrieveConfigByKeyRsp**](RetrieveConfigByKeyRsp.md)
 
 ### Authorization
 
@@ -476,7 +476,7 @@ Name | Type | Description  | Notes
 
 ## ConfigTemplatePut
 
-> InlineResponse2005 ConfigTemplatePut(ctx, optional)
+> UpdateConfigTemplateRsp ConfigTemplatePut(ctx, optional)
 
 更新配置模版
 
@@ -501,7 +501,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](inline_response_200_5.md)
+[**UpdateConfigTemplateRsp**](UpdateConfigTemplateRsp.md)
 
 ### Authorization
 

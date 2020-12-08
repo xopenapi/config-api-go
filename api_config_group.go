@@ -37,16 +37,16 @@ ConfigGroupBatchDeletePost 批量删除组
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ConfigGroupBatchDeletePostOpts - Optional Parameters:
  * @param "IdsReq" (optional.Interface of IdsReq) - 
-@return InlineResponse2001
+@return InlineResponse200
 */
-func (a *ConfigGroupApiService) ConfigGroupBatchDeletePost(ctx _context.Context, localVarOptionals *ConfigGroupBatchDeletePostOpts) (InlineResponse2001, *_nethttp.Response, error) {
+func (a *ConfigGroupApiService) ConfigGroupBatchDeletePost(ctx _context.Context, localVarOptionals *ConfigGroupBatchDeletePostOpts) (InlineResponse200, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse2001
+		localVarReturnValue  InlineResponse200
 	)
 
 	// create path and map variables
@@ -128,16 +128,16 @@ ConfigGroupBatchRetrievePost 批量查询组
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ConfigGroupBatchRetrievePostOpts - Optional Parameters:
  * @param "IdsReq" (optional.Interface of IdsReq) - 
-@return InlineResponse20010
+@return GetConfigGroupsRsp
 */
-func (a *ConfigGroupApiService) ConfigGroupBatchRetrievePost(ctx _context.Context, localVarOptionals *ConfigGroupBatchRetrievePostOpts) (InlineResponse20010, *_nethttp.Response, error) {
+func (a *ConfigGroupApiService) ConfigGroupBatchRetrievePost(ctx _context.Context, localVarOptionals *ConfigGroupBatchRetrievePostOpts) (GetConfigGroupsRsp, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse20010
+		localVarReturnValue  GetConfigGroupsRsp
 	)
 
 	// create path and map variables
@@ -219,16 +219,16 @@ Cursor查询组
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ConfigGroupCursorPostOpts - Optional Parameters:
  * @param "CursorQuery" (optional.Interface of CursorQuery) - 
-@return InlineResponse20012
+@return CursorConfigGroupsRsp
 */
-func (a *ConfigGroupApiService) ConfigGroupCursorPost(ctx _context.Context, localVarOptionals *ConfigGroupCursorPostOpts) (InlineResponse20012, *_nethttp.Response, error) {
+func (a *ConfigGroupApiService) ConfigGroupCursorPost(ctx _context.Context, localVarOptionals *ConfigGroupCursorPostOpts) (CursorConfigGroupsRsp, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse20012
+		localVarReturnValue  CursorConfigGroupsRsp
 	)
 
 	// create path and map variables
@@ -304,16 +304,16 @@ ConfigGroupIdDelete 删除组
 删除组
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id 删除组
-@return InlineResponse2001
+@return InlineResponse200
 */
-func (a *ConfigGroupApiService) ConfigGroupIdDelete(ctx _context.Context, id string) (InlineResponse2001, *_nethttp.Response, error) {
+func (a *ConfigGroupApiService) ConfigGroupIdDelete(ctx _context.Context, id string) (InlineResponse200, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodDelete
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse2001
+		localVarReturnValue  InlineResponse200
 	)
 
 	// create path and map variables
@@ -382,16 +382,16 @@ ConfigGroupIdGet 查询组
 查询组通过组ID
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id 查询组通过组ID
-@return InlineResponse2009
+@return GetConfigGroupRsp
 */
-func (a *ConfigGroupApiService) ConfigGroupIdGet(ctx _context.Context, id string) (InlineResponse2009, *_nethttp.Response, error) {
+func (a *ConfigGroupApiService) ConfigGroupIdGet(ctx _context.Context, id string) (GetConfigGroupRsp, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse2009
+		localVarReturnValue  GetConfigGroupRsp
 	)
 
 	// create path and map variables
@@ -466,16 +466,16 @@ Page查询组
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ConfigGroupPagePostOpts - Optional Parameters:
  * @param "PageQuery" (optional.Interface of PageQuery) - 
-@return InlineResponse20011
+@return PageConfigGroupsRsp
 */
-func (a *ConfigGroupApiService) ConfigGroupPagePost(ctx _context.Context, localVarOptionals *ConfigGroupPagePostOpts) (InlineResponse20011, *_nethttp.Response, error) {
+func (a *ConfigGroupApiService) ConfigGroupPagePost(ctx _context.Context, localVarOptionals *ConfigGroupPagePostOpts) (PageConfigGroupsRsp, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse20011
+		localVarReturnValue  PageConfigGroupsRsp
 	)
 
 	// create path and map variables
@@ -557,16 +557,16 @@ ConfigGroupPost 创建组
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ConfigGroupPostOpts - Optional Parameters:
  * @param "CreateConfigGroupReq" (optional.Interface of CreateConfigGroupReq) - 
-@return InlineResponse2009
+@return CreateConfigGroupRsp
 */
-func (a *ConfigGroupApiService) ConfigGroupPost(ctx _context.Context, localVarOptionals *ConfigGroupPostOpts) (InlineResponse2009, *_nethttp.Response, error) {
+func (a *ConfigGroupApiService) ConfigGroupPost(ctx _context.Context, localVarOptionals *ConfigGroupPostOpts) (CreateConfigGroupRsp, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse2009
+		localVarReturnValue  CreateConfigGroupRsp
 	)
 
 	// create path and map variables
@@ -648,16 +648,16 @@ ConfigGroupPut 更新组
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ConfigGroupPutOpts - Optional Parameters:
  * @param "UpdateConfigGroupReq" (optional.Interface of UpdateConfigGroupReq) - 
-@return InlineResponse2009
+@return UpdateConfigGroupRsp
 */
-func (a *ConfigGroupApiService) ConfigGroupPut(ctx _context.Context, localVarOptionals *ConfigGroupPutOpts) (InlineResponse2009, *_nethttp.Response, error) {
+func (a *ConfigGroupApiService) ConfigGroupPut(ctx _context.Context, localVarOptionals *ConfigGroupPutOpts) (UpdateConfigGroupRsp, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPut
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse2009
+		localVarReturnValue  UpdateConfigGroupRsp
 	)
 
 	// create path and map variables
@@ -733,16 +733,16 @@ ConfigGroupRetrieveByNamePost 查询组
 查询组通过Name
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name 查询组通过Name
-@return InlineResponse2005
+@return RetrieveConfigGroupByNameRsp
 */
-func (a *ConfigGroupApiService) ConfigGroupRetrieveByNamePost(ctx _context.Context, name string) (InlineResponse2005, *_nethttp.Response, error) {
+func (a *ConfigGroupApiService) ConfigGroupRetrieveByNamePost(ctx _context.Context, name string) (RetrieveConfigGroupByNameRsp, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse2005
+		localVarReturnValue  RetrieveConfigGroupByNameRsp
 	)
 
 	// create path and map variables

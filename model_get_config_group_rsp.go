@@ -8,9 +8,9 @@
  */
 
 package config
-// InlineResponse2001 struct for InlineResponse2001
-type InlineResponse2001 struct {
+// GetConfigGroupRsp struct for GetConfigGroupRsp
+type GetConfigGroupRsp struct {
 	Code int64 `json:"code,omitempty"`
 	Msg string `json:"msg,omitempty"`
-	Data []Config `json:"data,omitempty"`
+	Data ConfigGroup `json:"data,omitempty"`
 }

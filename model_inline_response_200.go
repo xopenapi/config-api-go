@@ -12,5 +12,6 @@ package config
 type InlineResponse200 struct {
 	Code int64 `json:"code,omitempty"`
 	Msg string `json:"msg,omitempty"`
-	Data Config `json:"data,omitempty"`
+	// 暂时未返回数据
+	Data *interface{} `json:"data,omitempty"`
 }

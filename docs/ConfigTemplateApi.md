@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 ## ConfigTemplateBatchDeletePost
 
-> InlineResponse2001 ConfigTemplateBatchDeletePost(ctx, optional)
+> InlineResponse200 ConfigTemplateBatchDeletePost(ctx, optional)
 
 批量删除配置模版
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](inline_response_200_1.md)
+[**InlineResponse200**](inline_response_200.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ## ConfigTemplateBatchRetrieveByGroupPost
 
-> InlineResponse2006 ConfigTemplateBatchRetrieveByGroupPost(ctx, groupName)
+> BatchRetrieveConfigTemplatesByGroupRsp ConfigTemplateBatchRetrieveByGroupPost(ctx, groupName)
 
 查询配置模版
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](inline_response_200_6.md)
+[**BatchRetrieveConfigTemplatesByGroupRsp**](BatchRetrieveConfigTemplatesByGroupRsp.md)
 
 ### Authorization
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ## ConfigTemplateBatchRetrieveByKeysPost
 
-> InlineResponse2006 ConfigTemplateBatchRetrieveByKeysPost(ctx, optional)
+> BatchRetrieveConfigTemplatesByKeysRsp ConfigTemplateBatchRetrieveByKeysPost(ctx, optional)
 
 查询配置模版
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](inline_response_200_6.md)
+[**BatchRetrieveConfigTemplatesByKeysRsp**](BatchRetrieveConfigTemplatesByKeysRsp.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 ## ConfigTemplateBatchRetrievePost
 
-> InlineResponse2006 ConfigTemplateBatchRetrievePost(ctx, optional)
+> BatchRetrieveConfigTemplatesRsp ConfigTemplateBatchRetrievePost(ctx, optional)
 
 批量查询配置模版
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](inline_response_200_6.md)
+[**BatchRetrieveConfigTemplatesRsp**](BatchRetrieveConfigTemplatesRsp.md)
 
 ### Authorization
 
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ## ConfigTemplateCursorPost
 
-> InlineResponse2008 ConfigTemplateCursorPost(ctx, optional)
+> CursorConfigTemplatesRsp ConfigTemplateCursorPost(ctx, optional)
 
 Cursor查询配置模版
 
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](inline_response_200_8.md)
+[**CursorConfigTemplatesRsp**](CursorConfigTemplatesRsp.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ## ConfigTemplateIdDelete
 
-> InlineResponse2001 ConfigTemplateIdDelete(ctx, id)
+> InlineResponse200 ConfigTemplateIdDelete(ctx, id)
 
 删除配置模版
 
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](inline_response_200_1.md)
+[**InlineResponse200**](inline_response_200.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 ## ConfigTemplateIdGet
 
-> InlineResponse2005 ConfigTemplateIdGet(ctx, id)
+> GetConfigTemplateRsp ConfigTemplateIdGet(ctx, id)
 
 查询配置模版
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](inline_response_200_5.md)
+[**GetConfigTemplateRsp**](GetConfigTemplateRsp.md)
 
 ### Authorization
 
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 
 ## ConfigTemplatePagePost
 
-> InlineResponse2007 ConfigTemplatePagePost(ctx, optional)
+> PageConfigTemplatesRsp ConfigTemplatePagePost(ctx, optional)
 
 Page查询配置模版
 
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](inline_response_200_7.md)
+[**PageConfigTemplatesRsp**](PageConfigTemplatesRsp.md)
 
 ### Authorization
 
@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
 
 ## ConfigTemplatePost
 
-> InlineResponse2005 ConfigTemplatePost(ctx, optional)
+> CreateConfigTemplateRsp ConfigTemplatePost(ctx, optional)
 
 创建配置模版
 
@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](inline_response_200_5.md)
+[**CreateConfigTemplateRsp**](CreateConfigTemplateRsp.md)
 
 ### Authorization
 
@@ -379,7 +379,7 @@ Name | Type | Description  | Notes
 
 ## ConfigTemplateRetrieveByKeyPost
 
-> InlineResponse2005 ConfigTemplateRetrieveByKeyPost(ctx, key)
+> RetrieveConfigTemplateByKeyRsp ConfigTemplateRetrieveByKeyPost(ctx, key)
 
 查询配置模版
 
@@ -395,7 +395,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](inline_response_200_5.md)
+[**RetrieveConfigTemplateByKeyRsp**](RetrieveConfigTemplateByKeyRsp.md)
 
 ### Authorization
 

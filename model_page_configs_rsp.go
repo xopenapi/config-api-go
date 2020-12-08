@@ -8,9 +8,9 @@
  */
 
 package config
-// InlineResponse2001 struct for InlineResponse2001
-type InlineResponse2001 struct {
+// PageConfigsRsp struct for PageConfigsRsp
+type PageConfigsRsp struct {
 	Code int64 `json:"code,omitempty"`
 	Msg string `json:"msg,omitempty"`
-	Data []Config `json:"data,omitempty"`
+	Data PageConfigsRspData `json:"data,omitempty"`
 }

@@ -37,16 +37,16 @@ ConfigBatchDeletePost 批量删除配置
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ConfigBatchDeletePostOpts - Optional Parameters:
  * @param "IdsReq" (optional.Interface of IdsReq) - 
-@return InlineResponse2001
+@return InlineResponse200
 */
-func (a *ConfigApiService) ConfigBatchDeletePost(ctx _context.Context, localVarOptionals *ConfigBatchDeletePostOpts) (InlineResponse2001, *_nethttp.Response, error) {
+func (a *ConfigApiService) ConfigBatchDeletePost(ctx _context.Context, localVarOptionals *ConfigBatchDeletePostOpts) (InlineResponse200, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse2001
+		localVarReturnValue  InlineResponse200
 	)
 
 	// create path and map variables
@@ -128,16 +128,16 @@ ConfigBatchRetrieveByKeysPost 查询配置
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ConfigBatchRetrieveByKeysPostOpts - Optional Parameters:
  * @param "BatchRetrieveByKeysReq" (optional.Interface of BatchRetrieveByKeysReq) - 
-@return InlineResponse2002
+@return BatchRetrieveConfigsByKeysRsp
 */
-func (a *ConfigApiService) ConfigBatchRetrieveByKeysPost(ctx _context.Context, localVarOptionals *ConfigBatchRetrieveByKeysPostOpts) (InlineResponse2002, *_nethttp.Response, error) {
+func (a *ConfigApiService) ConfigBatchRetrieveByKeysPost(ctx _context.Context, localVarOptionals *ConfigBatchRetrieveByKeysPostOpts) (BatchRetrieveConfigsByKeysRsp, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse2002
+		localVarReturnValue  BatchRetrieveConfigsByKeysRsp
 	)
 
 	// create path and map variables
@@ -219,16 +219,16 @@ ConfigBatchRetrieveByResourcesPost 查询配置
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ConfigBatchRetrieveByResourcesPostOpts - Optional Parameters:
  * @param "BatchRetrieveByResourcesReq" (optional.Interface of BatchRetrieveByResourcesReq) - 
-@return InlineResponse2002
+@return InlineResponse2001
 */
-func (a *ConfigApiService) ConfigBatchRetrieveByResourcesPost(ctx _context.Context, localVarOptionals *ConfigBatchRetrieveByResourcesPostOpts) (InlineResponse2002, *_nethttp.Response, error) {
+func (a *ConfigApiService) ConfigBatchRetrieveByResourcesPost(ctx _context.Context, localVarOptionals *ConfigBatchRetrieveByResourcesPostOpts) (InlineResponse2001, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse2002
+		localVarReturnValue  InlineResponse2001
 	)
 
 	// create path and map variables
@@ -310,16 +310,16 @@ ConfigBatchRetrievePost 批量查询配置
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ConfigBatchRetrievePostOpts - Optional Parameters:
  * @param "IdsReq" (optional.Interface of IdsReq) - 
-@return InlineResponse2002
+@return BatchRetrieveConfigsRsp
 */
-func (a *ConfigApiService) ConfigBatchRetrievePost(ctx _context.Context, localVarOptionals *ConfigBatchRetrievePostOpts) (InlineResponse2002, *_nethttp.Response, error) {
+func (a *ConfigApiService) ConfigBatchRetrievePost(ctx _context.Context, localVarOptionals *ConfigBatchRetrievePostOpts) (BatchRetrieveConfigsRsp, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse2002
+		localVarReturnValue  BatchRetrieveConfigsRsp
 	)
 
 	// create path and map variables
@@ -401,16 +401,16 @@ Cursor查询配置
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ConfigCursorPostOpts - Optional Parameters:
  * @param "CursorQuery" (optional.Interface of CursorQuery) - 
-@return InlineResponse2004
+@return CursorConfigsRsp
 */
-func (a *ConfigApiService) ConfigCursorPost(ctx _context.Context, localVarOptionals *ConfigCursorPostOpts) (InlineResponse2004, *_nethttp.Response, error) {
+func (a *ConfigApiService) ConfigCursorPost(ctx _context.Context, localVarOptionals *ConfigCursorPostOpts) (CursorConfigsRsp, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse2004
+		localVarReturnValue  CursorConfigsRsp
 	)
 
 	// create path and map variables
@@ -486,16 +486,16 @@ ConfigIdDelete 删除配置
 删除配置
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id 删除配置
-@return InlineResponse2001
+@return InlineResponse200
 */
-func (a *ConfigApiService) ConfigIdDelete(ctx _context.Context, id string) (InlineResponse2001, *_nethttp.Response, error) {
+func (a *ConfigApiService) ConfigIdDelete(ctx _context.Context, id string) (InlineResponse200, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodDelete
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse2001
+		localVarReturnValue  InlineResponse200
 	)
 
 	// create path and map variables
@@ -564,16 +564,16 @@ ConfigIdGet 查询配置
 查询配置通过配置ID
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id 查询配置通过配置ID
-@return InlineResponse200
+@return GetConfigRsp
 */
-func (a *ConfigApiService) ConfigIdGet(ctx _context.Context, id string) (InlineResponse200, *_nethttp.Response, error) {
+func (a *ConfigApiService) ConfigIdGet(ctx _context.Context, id string) (GetConfigRsp, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse200
+		localVarReturnValue  GetConfigRsp
 	)
 
 	// create path and map variables
@@ -648,16 +648,16 @@ Page查询配置
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ConfigPagePostOpts - Optional Parameters:
  * @param "PageQuery" (optional.Interface of PageQuery) - 
-@return InlineResponse2003
+@return PageConfigsRsp
 */
-func (a *ConfigApiService) ConfigPagePost(ctx _context.Context, localVarOptionals *ConfigPagePostOpts) (InlineResponse2003, *_nethttp.Response, error) {
+func (a *ConfigApiService) ConfigPagePost(ctx _context.Context, localVarOptionals *ConfigPagePostOpts) (PageConfigsRsp, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse2003
+		localVarReturnValue  PageConfigsRsp
 	)
 
 	// create path and map variables
@@ -739,16 +739,16 @@ ConfigPost 创建配置
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ConfigPostOpts - Optional Parameters:
  * @param "CreateConfigReq" (optional.Interface of CreateConfigReq) - 
-@return InlineResponse200
+@return CreateConfigRsp
 */
-func (a *ConfigApiService) ConfigPost(ctx _context.Context, localVarOptionals *ConfigPostOpts) (InlineResponse200, *_nethttp.Response, error) {
+func (a *ConfigApiService) ConfigPost(ctx _context.Context, localVarOptionals *ConfigPostOpts) (CreateConfigRsp, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse200
+		localVarReturnValue  CreateConfigRsp
 	)
 
 	// create path and map variables
@@ -830,16 +830,16 @@ ConfigPut 更新配置
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ConfigPutOpts - Optional Parameters:
  * @param "UpdateConfigReq" (optional.Interface of UpdateConfigReq) - 
-@return InlineResponse200
+@return UpdateConfigRsp
 */
-func (a *ConfigApiService) ConfigPut(ctx _context.Context, localVarOptionals *ConfigPutOpts) (InlineResponse200, *_nethttp.Response, error) {
+func (a *ConfigApiService) ConfigPut(ctx _context.Context, localVarOptionals *ConfigPutOpts) (UpdateConfigRsp, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPut
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse200
+		localVarReturnValue  UpdateConfigRsp
 	)
 
 	// create path and map variables
@@ -921,16 +921,16 @@ ConfigRetrieveByKeyPost 查询配置
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ConfigRetrieveByKeyPostOpts - Optional Parameters:
  * @param "RetrieveConfigByKeyReq" (optional.Interface of RetrieveConfigByKeyReq) - 
-@return InlineResponse200
+@return RetrieveConfigByKeyRsp
 */
-func (a *ConfigApiService) ConfigRetrieveByKeyPost(ctx _context.Context, localVarOptionals *ConfigRetrieveByKeyPostOpts) (InlineResponse200, *_nethttp.Response, error) {
+func (a *ConfigApiService) ConfigRetrieveByKeyPost(ctx _context.Context, localVarOptionals *ConfigRetrieveByKeyPostOpts) (RetrieveConfigByKeyRsp, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse200
+		localVarReturnValue  RetrieveConfigByKeyRsp
 	)
 
 	// create path and map variables
@@ -1012,16 +1012,16 @@ ConfigTemplatePut 更新配置模版
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ConfigTemplatePutOpts - Optional Parameters:
  * @param "UpdateConfigTemplateReq" (optional.Interface of UpdateConfigTemplateReq) - 
-@return InlineResponse2005
+@return UpdateConfigTemplateRsp
 */
-func (a *ConfigApiService) ConfigTemplatePut(ctx _context.Context, localVarOptionals *ConfigTemplatePutOpts) (InlineResponse2005, *_nethttp.Response, error) {
+func (a *ConfigApiService) ConfigTemplatePut(ctx _context.Context, localVarOptionals *ConfigTemplatePutOpts) (UpdateConfigTemplateRsp, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPut
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse2005
+		localVarReturnValue  UpdateConfigTemplateRsp
 	)
 
 	// create path and map variables

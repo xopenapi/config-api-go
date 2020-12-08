@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## ConfigGroupBatchDeletePost
 
-> InlineResponse2001 ConfigGroupBatchDeletePost(ctx, optional)
+> InlineResponse200 ConfigGroupBatchDeletePost(ctx, optional)
 
 批量删除组
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](inline_response_200_1.md)
+[**InlineResponse200**](inline_response_200.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ## ConfigGroupBatchRetrievePost
 
-> InlineResponse20010 ConfigGroupBatchRetrievePost(ctx, optional)
+> GetConfigGroupsRsp ConfigGroupBatchRetrievePost(ctx, optional)
 
 批量查询组
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](inline_response_200_10.md)
+[**GetConfigGroupsRsp**](GetConfigGroupsRsp.md)
 
 ### Authorization
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ## ConfigGroupCursorPost
 
-> InlineResponse20012 ConfigGroupCursorPost(ctx, optional)
+> CursorConfigGroupsRsp ConfigGroupCursorPost(ctx, optional)
 
 Cursor查询组
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012**](inline_response_200_12.md)
+[**CursorConfigGroupsRsp**](CursorConfigGroupsRsp.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ## ConfigGroupIdDelete
 
-> InlineResponse2001 ConfigGroupIdDelete(ctx, id)
+> InlineResponse200 ConfigGroupIdDelete(ctx, id)
 
 删除组
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](inline_response_200_1.md)
+[**InlineResponse200**](inline_response_200.md)
 
 ### Authorization
 
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 
 ## ConfigGroupIdGet
 
-> InlineResponse2009 ConfigGroupIdGet(ctx, id)
+> GetConfigGroupRsp ConfigGroupIdGet(ctx, id)
 
 查询组
 
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](inline_response_200_9.md)
+[**GetConfigGroupRsp**](GetConfigGroupRsp.md)
 
 ### Authorization
 
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 
 ## ConfigGroupPagePost
 
-> InlineResponse20011 ConfigGroupPagePost(ctx, optional)
+> PageConfigGroupsRsp ConfigGroupPagePost(ctx, optional)
 
 Page查询组
 
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](inline_response_200_11.md)
+[**PageConfigGroupsRsp**](PageConfigGroupsRsp.md)
 
 ### Authorization
 
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 
 ## ConfigGroupPost
 
-> InlineResponse2009 ConfigGroupPost(ctx, optional)
+> CreateConfigGroupRsp ConfigGroupPost(ctx, optional)
 
 创建组
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](inline_response_200_9.md)
+[**CreateConfigGroupRsp**](CreateConfigGroupRsp.md)
 
 ### Authorization
 
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 
 ## ConfigGroupPut
 
-> InlineResponse2009 ConfigGroupPut(ctx, optional)
+> UpdateConfigGroupRsp ConfigGroupPut(ctx, optional)
 
 更新组
 
@@ -326,7 +326,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](inline_response_200_9.md)
+[**UpdateConfigGroupRsp**](UpdateConfigGroupRsp.md)
 
 ### Authorization
 
@@ -344,7 +344,7 @@ Name | Type | Description  | Notes
 
 ## ConfigGroupRetrieveByNamePost
 
-> InlineResponse2005 ConfigGroupRetrieveByNamePost(ctx, name)
+> RetrieveConfigGroupByNameRsp ConfigGroupRetrieveByNamePost(ctx, name)
 
 查询组
 
@@ -360,7 +360,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](inline_response_200_5.md)
+[**RetrieveConfigGroupByNameRsp**](RetrieveConfigGroupByNameRsp.md)
 
 ### Authorization
 

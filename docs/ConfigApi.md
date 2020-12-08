@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ## ConfigBatchRetrieveByResourcesPost
 
-> InlineResponse200 ConfigBatchRetrieveByResourcesPost(ctx, optional)
+> BatchRetrieveConfigsByResourcesRsp ConfigBatchRetrieveByResourcesPost(ctx, optional)
 
 查询配置
 
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](inline_response_200.md)
+[**BatchRetrieveConfigsByResourcesRsp**](BatchRetrieveConfigsByResourcesRsp.md)
 
 ### Authorization
 

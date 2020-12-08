@@ -219,16 +219,16 @@ ConfigBatchRetrieveByResourcesPost 查询配置
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ConfigBatchRetrieveByResourcesPostOpts - Optional Parameters:
  * @param "BatchRetrieveByResourcesReq" (optional.Interface of BatchRetrieveByResourcesReq) - 
-@return InlineResponse200
+@return BatchRetrieveConfigsByResourcesRsp
 */
-func (a *ConfigApiService) ConfigBatchRetrieveByResourcesPost(ctx _context.Context, localVarOptionals *ConfigBatchRetrieveByResourcesPostOpts) (InlineResponse200, *_nethttp.Response, error) {
+func (a *ConfigApiService) ConfigBatchRetrieveByResourcesPost(ctx _context.Context, localVarOptionals *ConfigBatchRetrieveByResourcesPostOpts) (BatchRetrieveConfigsByResourcesRsp, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse200
+		localVarReturnValue  BatchRetrieveConfigsByResourcesRsp
 	)
 
 	// create path and map variables

@@ -8,8 +8,8 @@
  */
 
 package config
-// InlineResponse200 struct for InlineResponse200
-type InlineResponse200 struct {
+// BatchRetrieveConfigsByResourcesRsp struct for BatchRetrieveConfigsByResourcesRsp
+type BatchRetrieveConfigsByResourcesRsp struct {
 	Code int64 `json:"code,omitempty"`
 	Msg string `json:"msg,omitempty"`
 	Data []Config `json:"data,omitempty"`

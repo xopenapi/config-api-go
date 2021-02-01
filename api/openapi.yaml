@@ -731,36 +731,15 @@ components:
       type: object
     RetrieveConfigByKeyReq:
       example:
-        msg: msg
-        code: 0
-        data:
-        - resourceId: resourceId
-          groupId: groupId
-          ctime: 6
-          id: id
-          templateId: templateId
-          mtime: 1
-          value: '{}'
-          key: key
-        - resourceId: resourceId
-          groupId: groupId
-          ctime: 6
-          id: id
-          templateId: templateId
-          mtime: 1
-          value: '{}'
-          key: key
+        resourceId: resourceId
+        key: key
       properties:
-        code:
-          format: int64
-          type: integer
-        msg:
+        resourceId:
           format: string
           type: string
-        data:
-          items:
-            $ref: '#/components/schemas/Config'
-          type: array
+        key:
+          format: string
+          type: string
       type: object
     RetrieveConfigByKeyResponse:
       example:

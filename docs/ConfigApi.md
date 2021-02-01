@@ -4,24 +4,24 @@ All URIs are relative to *https://api.lucfish.com/configuration/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ConfigBatchDeletePost**](ConfigApi.md#ConfigBatchDeletePost) | **Post** /config/batchDelete | 批量删除配置
-[**ConfigBatchRetrieveByKeysPost**](ConfigApi.md#ConfigBatchRetrieveByKeysPost) | **Post** /config/batchRetrieveByKeys | 查询配置
-[**ConfigBatchRetrieveByResourcesPost**](ConfigApi.md#ConfigBatchRetrieveByResourcesPost) | **Post** /config/batchRetrieveByResources | 查询配置
-[**ConfigBatchRetrievePost**](ConfigApi.md#ConfigBatchRetrievePost) | **Post** /config/batchRetrieve | 批量查询配置
-[**ConfigCursorPost**](ConfigApi.md#ConfigCursorPost) | **Post** /config/cursor | Cursor查询配置
-[**ConfigIdDelete**](ConfigApi.md#ConfigIdDelete) | **Delete** /config/{id} | 删除配置
-[**ConfigIdGet**](ConfigApi.md#ConfigIdGet) | **Get** /config/{id} | 查询配置
-[**ConfigPagePost**](ConfigApi.md#ConfigPagePost) | **Post** /config/page | Page查询配置
-[**ConfigPost**](ConfigApi.md#ConfigPost) | **Post** /config | 创建配置
-[**ConfigPut**](ConfigApi.md#ConfigPut) | **Put** /config | 更新配置
-[**ConfigRetrieveByKeyPost**](ConfigApi.md#ConfigRetrieveByKeyPost) | **Post** /config/retrieveByKey | 查询配置
-[**ConfigTemplatePut**](ConfigApi.md#ConfigTemplatePut) | **Put** /configTemplate | 更新配置模版
+[**BatchDeleteConfigs**](ConfigApi.md#BatchDeleteConfigs) | **Post** /config/batchDelete | 批量删除配置
+[**BatchRetrieveByKeysConfigs**](ConfigApi.md#BatchRetrieveByKeysConfigs) | **Post** /config/batchRetrieveByKeys | 查询配置
+[**BatchRetrieveByResourcesConfigs**](ConfigApi.md#BatchRetrieveByResourcesConfigs) | **Post** /config/batchRetrieveByResources | 查询配置
+[**BatchRetrieveConfigs**](ConfigApi.md#BatchRetrieveConfigs) | **Post** /config/batchRetrieve | 批量查询配置
+[**CreateConfig**](ConfigApi.md#CreateConfig) | **Post** /config | 创建配置
+[**CursorConfigs**](ConfigApi.md#CursorConfigs) | **Post** /config/cursor | Cursor查询配置
+[**DeleteConfig**](ConfigApi.md#DeleteConfig) | **Delete** /config/{id} | 删除配置
+[**GetConfig**](ConfigApi.md#GetConfig) | **Get** /config/{id} | 查询配置
+[**PageConfigs**](ConfigApi.md#PageConfigs) | **Post** /config/page | Page查询配置
+[**RetrieveByKeyConfig**](ConfigApi.md#RetrieveByKeyConfig) | **Post** /config/retrieveByKey | 查询配置
+[**UpdateConfig**](ConfigApi.md#UpdateConfig) | **Put** /config | 更新配置
+[**UpdateConfigTemplate**](ConfigApi.md#UpdateConfigTemplate) | **Put** /configTemplate | 更新配置模版
 
 
 
-## ConfigBatchDeletePost
+## BatchDeleteConfigs
 
-> DeleteRsp ConfigBatchDeletePost(ctx, optional)
+> DeleteResponse BatchDeleteConfigs(ctx, optional)
 
 批量删除配置
 
@@ -33,11 +33,11 @@ Method | HTTP request | Description
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ConfigBatchDeletePostOpts** | optional parameters | nil if no parameters
+ **optional** | ***BatchDeleteConfigsOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a ConfigBatchDeletePostOpts struct
+Optional parameters are passed through a pointer to a BatchDeleteConfigsOpts struct
 
 
 Name | Type | Description  | Notes
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteRsp**](DeleteRsp.md)
+[**DeleteResponse**](DeleteResponse.md)
 
 ### Authorization
 
@@ -62,9 +62,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## ConfigBatchRetrieveByKeysPost
+## BatchRetrieveByKeysConfigs
 
-> BatchRetrieveConfigsByKeysRsp ConfigBatchRetrieveByKeysPost(ctx, optional)
+> BatchRetrieveConfigsByKeysResponse BatchRetrieveByKeysConfigs(ctx, optional)
 
 查询配置
 
@@ -76,11 +76,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ConfigBatchRetrieveByKeysPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***BatchRetrieveByKeysConfigsOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a ConfigBatchRetrieveByKeysPostOpts struct
+Optional parameters are passed through a pointer to a BatchRetrieveByKeysConfigsOpts struct
 
 
 Name | Type | Description  | Notes
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BatchRetrieveConfigsByKeysRsp**](BatchRetrieveConfigsByKeysRsp.md)
+[**BatchRetrieveConfigsByKeysResponse**](BatchRetrieveConfigsByKeysResponse.md)
 
 ### Authorization
 
@@ -105,9 +105,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## ConfigBatchRetrieveByResourcesPost
+## BatchRetrieveByResourcesConfigs
 
-> BatchRetrieveConfigsByResourcesRsp ConfigBatchRetrieveByResourcesPost(ctx, optional)
+> BatchRetrieveConfigsByResourcesResponse BatchRetrieveByResourcesConfigs(ctx, optional)
 
 查询配置
 
@@ -119,11 +119,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ConfigBatchRetrieveByResourcesPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***BatchRetrieveByResourcesConfigsOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a ConfigBatchRetrieveByResourcesPostOpts struct
+Optional parameters are passed through a pointer to a BatchRetrieveByResourcesConfigsOpts struct
 
 
 Name | Type | Description  | Notes
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BatchRetrieveConfigsByResourcesRsp**](BatchRetrieveConfigsByResourcesRsp.md)
+[**BatchRetrieveConfigsByResourcesResponse**](BatchRetrieveConfigsByResourcesResponse.md)
 
 ### Authorization
 
@@ -148,9 +148,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## ConfigBatchRetrievePost
+## BatchRetrieveConfigs
 
-> BatchRetrieveConfigsRsp ConfigBatchRetrievePost(ctx, optional)
+> BatchRetrieveConfigsResponse BatchRetrieveConfigs(ctx, optional)
 
 批量查询配置
 
@@ -162,11 +162,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ConfigBatchRetrievePostOpts** | optional parameters | nil if no parameters
+ **optional** | ***BatchRetrieveConfigsOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a ConfigBatchRetrievePostOpts struct
+Optional parameters are passed through a pointer to a BatchRetrieveConfigsOpts struct
 
 
 Name | Type | Description  | Notes
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BatchRetrieveConfigsRsp**](BatchRetrieveConfigsRsp.md)
+[**BatchRetrieveConfigsResponse**](BatchRetrieveConfigsResponse.md)
 
 ### Authorization
 
@@ -191,9 +191,52 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## ConfigCursorPost
+## CreateConfig
 
-> CursorConfigsRsp ConfigCursorPost(ctx, optional)
+> CreateConfigResponse CreateConfig(ctx, optional)
+
+创建配置
+
+创建配置
+
+### Required Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+ **optional** | ***CreateConfigOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+
+Optional parameters are passed through a pointer to a CreateConfigOpts struct
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createConfigReq** | [**optional.Interface of CreateConfigReq**](CreateConfigReq.md)|  | 
+
+### Return type
+
+[**CreateConfigResponse**](CreateConfigResponse.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CursorConfigs
+
+> CursorConfigsResponse CursorConfigs(ctx, optional)
 
 Cursor查询配置
 
@@ -205,11 +248,11 @@ Cursor查询配置
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ConfigCursorPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***CursorConfigsOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a ConfigCursorPostOpts struct
+Optional parameters are passed through a pointer to a CursorConfigsOpts struct
 
 
 Name | Type | Description  | Notes
@@ -218,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CursorConfigsRsp**](CursorConfigsRsp.md)
+[**CursorConfigsResponse**](CursorConfigsResponse.md)
 
 ### Authorization
 
@@ -234,9 +277,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## ConfigIdDelete
+## DeleteConfig
 
-> DeleteRsp ConfigIdDelete(ctx, id)
+> DeleteResponse DeleteConfig(ctx, id)
 
 删除配置
 
@@ -252,7 +295,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteRsp**](DeleteRsp.md)
+[**DeleteResponse**](DeleteResponse.md)
 
 ### Authorization
 
@@ -268,9 +311,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## ConfigIdGet
+## GetConfig
 
-> GetConfigRsp ConfigIdGet(ctx, id)
+> GetConfigResponse GetConfig(ctx, id)
 
 查询配置
 
@@ -286,7 +329,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetConfigRsp**](GetConfigRsp.md)
+[**GetConfigResponse**](GetConfigResponse.md)
 
 ### Authorization
 
@@ -302,9 +345,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## ConfigPagePost
+## PageConfigs
 
-> PageConfigsRsp ConfigPagePost(ctx, optional)
+> PageConfigsResponse PageConfigs(ctx, optional)
 
 Page查询配置
 
@@ -316,11 +359,11 @@ Page查询配置
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ConfigPagePostOpts** | optional parameters | nil if no parameters
+ **optional** | ***PageConfigsOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a ConfigPagePostOpts struct
+Optional parameters are passed through a pointer to a PageConfigsOpts struct
 
 
 Name | Type | Description  | Notes
@@ -329,7 +372,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageConfigsRsp**](PageConfigsRsp.md)
+[**PageConfigsResponse**](PageConfigsResponse.md)
 
 ### Authorization
 
@@ -345,95 +388,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## ConfigPost
+## RetrieveByKeyConfig
 
-> CreateConfigRsp ConfigPost(ctx, optional)
-
-创建配置
-
-创建配置
-
-### Required Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ConfigPostOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-
-Optional parameters are passed through a pointer to a ConfigPostOpts struct
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **createConfigReq** | [**optional.Interface of CreateConfigReq**](CreateConfigReq.md)|  | 
-
-### Return type
-
-[**CreateConfigRsp**](CreateConfigRsp.md)
-
-### Authorization
-
-[ApiKey](../README.md#ApiKey)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## ConfigPut
-
-> UpdateConfigRsp ConfigPut(ctx, optional)
-
-更新配置
-
-更新配置，需要全部的配置信息
-
-### Required Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ConfigPutOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-
-Optional parameters are passed through a pointer to a ConfigPutOpts struct
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **updateConfigReq** | [**optional.Interface of UpdateConfigReq**](UpdateConfigReq.md)|  | 
-
-### Return type
-
-[**UpdateConfigRsp**](UpdateConfigRsp.md)
-
-### Authorization
-
-[ApiKey](../README.md#ApiKey)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## ConfigRetrieveByKeyPost
-
-> RetrieveConfigByKeyRsp ConfigRetrieveByKeyPost(ctx, optional)
+> RetrieveConfigByKeyResponse RetrieveByKeyConfig(ctx, optional)
 
 查询配置
 
@@ -445,11 +402,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ConfigRetrieveByKeyPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***RetrieveByKeyConfigOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a ConfigRetrieveByKeyPostOpts struct
+Optional parameters are passed through a pointer to a RetrieveByKeyConfigOpts struct
 
 
 Name | Type | Description  | Notes
@@ -458,7 +415,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RetrieveConfigByKeyRsp**](RetrieveConfigByKeyRsp.md)
+[**RetrieveConfigByKeyResponse**](RetrieveConfigByKeyResponse.md)
 
 ### Authorization
 
@@ -474,9 +431,52 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## ConfigTemplatePut
+## UpdateConfig
 
-> UpdateConfigTemplateRsp ConfigTemplatePut(ctx, optional)
+> UpdateConfigResponse UpdateConfig(ctx, optional)
+
+更新配置
+
+更新配置，需要全部的配置信息
+
+### Required Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+ **optional** | ***UpdateConfigOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+
+Optional parameters are passed through a pointer to a UpdateConfigOpts struct
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **updateConfigReq** | [**optional.Interface of UpdateConfigReq**](UpdateConfigReq.md)|  | 
+
+### Return type
+
+[**UpdateConfigResponse**](UpdateConfigResponse.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateConfigTemplate
+
+> UpdateConfigTemplateResponse UpdateConfigTemplate(ctx, optional)
 
 更新配置模版
 
@@ -488,11 +488,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ConfigTemplatePutOpts** | optional parameters | nil if no parameters
+ **optional** | ***UpdateConfigTemplateOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a ConfigTemplatePutOpts struct
+Optional parameters are passed through a pointer to a UpdateConfigTemplateOpts struct
 
 
 Name | Type | Description  | Notes
@@ -501,7 +501,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UpdateConfigTemplateRsp**](UpdateConfigTemplateRsp.md)
+[**UpdateConfigTemplateResponse**](UpdateConfigTemplateResponse.md)
 
 ### Authorization
 

@@ -26,27 +26,27 @@ var (
 // ConfigTemplateApiService ConfigTemplateApi service
 type ConfigTemplateApiService service
 
-// ConfigTemplateBatchDeletePostOpts Optional parameters for the method 'ConfigTemplateBatchDeletePost'
-type ConfigTemplateBatchDeletePostOpts struct {
+// BatchDeleteConfigTemplatesOpts Optional parameters for the method 'BatchDeleteConfigTemplates'
+type BatchDeleteConfigTemplatesOpts struct {
     IdsReq optional.Interface
 }
 
 /*
-ConfigTemplateBatchDeletePost 批量删除配置模版
+BatchDeleteConfigTemplates 批量删除配置模版
 批量删除配置模版通过配置Id
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ConfigTemplateBatchDeletePostOpts - Optional Parameters:
+ * @param optional nil or *BatchDeleteConfigTemplatesOpts - Optional Parameters:
  * @param "IdsReq" (optional.Interface of IdsReq) - 
-@return DeleteRsp
+@return DeleteResponse
 */
-func (a *ConfigTemplateApiService) ConfigTemplateBatchDeletePost(ctx _context.Context, localVarOptionals *ConfigTemplateBatchDeletePostOpts) (DeleteRsp, *_nethttp.Response, error) {
+func (a *ConfigTemplateApiService) BatchDeleteConfigTemplates(ctx _context.Context, localVarOptionals *BatchDeleteConfigTemplatesOpts) (DeleteResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  DeleteRsp
+		localVarReturnValue  DeleteResponse
 	)
 
 	// create path and map variables
@@ -118,20 +118,20 @@ func (a *ConfigTemplateApiService) ConfigTemplateBatchDeletePost(ctx _context.Co
 }
 
 /*
-ConfigTemplateBatchRetrieveByGroupPost 查询配置模版
+BatchRetrieveByGroupConfigTemplates 查询配置模版
 查询配置模版通过配置模版GroupID
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param groupName 分组标签名
-@return BatchRetrieveConfigTemplatesByGroupRsp
+@return BatchRetrieveConfigTemplatesByGroupResponse
 */
-func (a *ConfigTemplateApiService) ConfigTemplateBatchRetrieveByGroupPost(ctx _context.Context, groupName string) (BatchRetrieveConfigTemplatesByGroupRsp, *_nethttp.Response, error) {
+func (a *ConfigTemplateApiService) BatchRetrieveByGroupConfigTemplates(ctx _context.Context, groupName string) (BatchRetrieveConfigTemplatesByGroupResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  BatchRetrieveConfigTemplatesByGroupRsp
+		localVarReturnValue  BatchRetrieveConfigTemplatesByGroupResponse
 	)
 
 	// create path and map variables
@@ -194,27 +194,27 @@ func (a *ConfigTemplateApiService) ConfigTemplateBatchRetrieveByGroupPost(ctx _c
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-// ConfigTemplateBatchRetrieveByKeysPostOpts Optional parameters for the method 'ConfigTemplateBatchRetrieveByKeysPost'
-type ConfigTemplateBatchRetrieveByKeysPostOpts struct {
+// BatchRetrieveByKeysConfigTemplatesOpts Optional parameters for the method 'BatchRetrieveByKeysConfigTemplates'
+type BatchRetrieveByKeysConfigTemplatesOpts struct {
     BatchRetrieveConfigTemplateByKeysReq optional.Interface
 }
 
 /*
-ConfigTemplateBatchRetrieveByKeysPost 查询配置模版
+BatchRetrieveByKeysConfigTemplates 查询配置模版
 查询配置通过配置Keys
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ConfigTemplateBatchRetrieveByKeysPostOpts - Optional Parameters:
+ * @param optional nil or *BatchRetrieveByKeysConfigTemplatesOpts - Optional Parameters:
  * @param "BatchRetrieveConfigTemplateByKeysReq" (optional.Interface of BatchRetrieveConfigTemplateByKeysReq) - 
-@return BatchRetrieveConfigTemplatesByKeysRsp
+@return BatchRetrieveConfigTemplatesByKeysResponse
 */
-func (a *ConfigTemplateApiService) ConfigTemplateBatchRetrieveByKeysPost(ctx _context.Context, localVarOptionals *ConfigTemplateBatchRetrieveByKeysPostOpts) (BatchRetrieveConfigTemplatesByKeysRsp, *_nethttp.Response, error) {
+func (a *ConfigTemplateApiService) BatchRetrieveByKeysConfigTemplates(ctx _context.Context, localVarOptionals *BatchRetrieveByKeysConfigTemplatesOpts) (BatchRetrieveConfigTemplatesByKeysResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  BatchRetrieveConfigTemplatesByKeysRsp
+		localVarReturnValue  BatchRetrieveConfigTemplatesByKeysResponse
 	)
 
 	// create path and map variables
@@ -285,27 +285,27 @@ func (a *ConfigTemplateApiService) ConfigTemplateBatchRetrieveByKeysPost(ctx _co
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-// ConfigTemplateBatchRetrievePostOpts Optional parameters for the method 'ConfigTemplateBatchRetrievePost'
-type ConfigTemplateBatchRetrievePostOpts struct {
+// BatchRetrieveConfigTemplatesOpts Optional parameters for the method 'BatchRetrieveConfigTemplates'
+type BatchRetrieveConfigTemplatesOpts struct {
     IdsReq optional.Interface
 }
 
 /*
-ConfigTemplateBatchRetrievePost 批量查询配置模版
+BatchRetrieveConfigTemplates 批量查询配置模版
 批量查询配置模版通过配置Id
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ConfigTemplateBatchRetrievePostOpts - Optional Parameters:
+ * @param optional nil or *BatchRetrieveConfigTemplatesOpts - Optional Parameters:
  * @param "IdsReq" (optional.Interface of IdsReq) - 
-@return BatchRetrieveConfigTemplatesRsp
+@return BatchRetrieveConfigTemplatesResponse
 */
-func (a *ConfigTemplateApiService) ConfigTemplateBatchRetrievePost(ctx _context.Context, localVarOptionals *ConfigTemplateBatchRetrievePostOpts) (BatchRetrieveConfigTemplatesRsp, *_nethttp.Response, error) {
+func (a *ConfigTemplateApiService) BatchRetrieveConfigTemplates(ctx _context.Context, localVarOptionals *BatchRetrieveConfigTemplatesOpts) (BatchRetrieveConfigTemplatesResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  BatchRetrieveConfigTemplatesRsp
+		localVarReturnValue  BatchRetrieveConfigTemplatesResponse
 	)
 
 	// create path and map variables
@@ -376,27 +376,118 @@ func (a *ConfigTemplateApiService) ConfigTemplateBatchRetrievePost(ctx _context.
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-// ConfigTemplateCursorPostOpts Optional parameters for the method 'ConfigTemplateCursorPost'
-type ConfigTemplateCursorPostOpts struct {
-    CursorQuery optional.Interface
+// CreateConfigTemplateOpts Optional parameters for the method 'CreateConfigTemplate'
+type CreateConfigTemplateOpts struct {
+    CreateConfigTemplateReq optional.Interface
 }
 
 /*
-ConfigTemplateCursorPost Cursor查询配置模版
-Cursor查询配置模版
+CreateConfigTemplate 创建配置模版
+创建配置模版
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ConfigTemplateCursorPostOpts - Optional Parameters:
- * @param "CursorQuery" (optional.Interface of CursorQuery) - 
-@return CursorConfigTemplatesRsp
+ * @param optional nil or *CreateConfigTemplateOpts - Optional Parameters:
+ * @param "CreateConfigTemplateReq" (optional.Interface of CreateConfigTemplateReq) - 
+@return CreateConfigTemplateResponse
 */
-func (a *ConfigTemplateApiService) ConfigTemplateCursorPost(ctx _context.Context, localVarOptionals *ConfigTemplateCursorPostOpts) (CursorConfigTemplatesRsp, *_nethttp.Response, error) {
+func (a *ConfigTemplateApiService) CreateConfigTemplate(ctx _context.Context, localVarOptionals *CreateConfigTemplateOpts) (CreateConfigTemplateResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  CursorConfigTemplatesRsp
+		localVarReturnValue  CreateConfigTemplateResponse
+	)
+
+	// create path and map variables
+	localVarPath := a.client.cfg.BasePath + "/configTemplate"
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := _neturl.Values{}
+	localVarFormParams := _neturl.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	if localVarOptionals != nil && localVarOptionals.CreateConfigTemplateReq.IsSet() {
+		localVarOptionalCreateConfigTemplateReq, localVarOptionalCreateConfigTemplateReqok := localVarOptionals.CreateConfigTemplateReq.Value().(CreateConfigTemplateReq)
+		if !localVarOptionalCreateConfigTemplateReqok {
+			return localVarReturnValue, nil, reportError("createConfigTemplateReq should be CreateConfigTemplateReq")
+		}
+		localVarPostBody = &localVarOptionalCreateConfigTemplateReq
+	}
+
+	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(r)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := _ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+// CursorConfigTemplatesOpts Optional parameters for the method 'CursorConfigTemplates'
+type CursorConfigTemplatesOpts struct {
+    CursorQuery optional.Interface
+}
+
+/*
+CursorConfigTemplates Cursor查询配置模版
+Cursor查询配置模版
+ * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param optional nil or *CursorConfigTemplatesOpts - Optional Parameters:
+ * @param "CursorQuery" (optional.Interface of CursorQuery) - 
+@return CursorConfigTemplatesResponse
+*/
+func (a *ConfigTemplateApiService) CursorConfigTemplates(ctx _context.Context, localVarOptionals *CursorConfigTemplatesOpts) (CursorConfigTemplatesResponse, *_nethttp.Response, error) {
+	var (
+		localVarHTTPMethod   = _nethttp.MethodPost
+		localVarPostBody     interface{}
+		localVarFormFileName string
+		localVarFileName     string
+		localVarFileBytes    []byte
+		localVarReturnValue  CursorConfigTemplatesResponse
 	)
 
 	// create path and map variables
@@ -468,20 +559,20 @@ func (a *ConfigTemplateApiService) ConfigTemplateCursorPost(ctx _context.Context
 }
 
 /*
-ConfigTemplateIdDelete 删除配置模版
+DeleteConfigTemplate 删除配置模版
 删除配置模版
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id 删除配置模版
-@return DeleteRsp
+@return DeleteResponse
 */
-func (a *ConfigTemplateApiService) ConfigTemplateIdDelete(ctx _context.Context, id string) (DeleteRsp, *_nethttp.Response, error) {
+func (a *ConfigTemplateApiService) DeleteConfigTemplate(ctx _context.Context, id string) (DeleteResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodDelete
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  DeleteRsp
+		localVarReturnValue  DeleteResponse
 	)
 
 	// create path and map variables
@@ -546,20 +637,20 @@ func (a *ConfigTemplateApiService) ConfigTemplateIdDelete(ctx _context.Context, 
 }
 
 /*
-ConfigTemplateIdGet 查询配置模版
+GetConfigTemplate 查询配置模版
 查询配置通过配置模版ID
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id 查询配置通过配置ID
-@return GetConfigTemplateRsp
+@return GetConfigTemplateResponse
 */
-func (a *ConfigTemplateApiService) ConfigTemplateIdGet(ctx _context.Context, id string) (GetConfigTemplateRsp, *_nethttp.Response, error) {
+func (a *ConfigTemplateApiService) GetConfigTemplate(ctx _context.Context, id string) (GetConfigTemplateResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  GetConfigTemplateRsp
+		localVarReturnValue  GetConfigTemplateResponse
 	)
 
 	// create path and map variables
@@ -623,27 +714,27 @@ func (a *ConfigTemplateApiService) ConfigTemplateIdGet(ctx _context.Context, id 
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-// ConfigTemplatePagePostOpts Optional parameters for the method 'ConfigTemplatePagePost'
-type ConfigTemplatePagePostOpts struct {
+// PageConfigTemplateOpts Optional parameters for the method 'PageConfigTemplate'
+type PageConfigTemplateOpts struct {
     PageQuery optional.Interface
 }
 
 /*
-ConfigTemplatePagePost Page查询配置模版
+PageConfigTemplate Page查询配置模版
 Page查询配置模版
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ConfigTemplatePagePostOpts - Optional Parameters:
+ * @param optional nil or *PageConfigTemplateOpts - Optional Parameters:
  * @param "PageQuery" (optional.Interface of PageQuery) - 
-@return PageConfigTemplatesRsp
+@return PageConfigTemplatesResponse
 */
-func (a *ConfigTemplateApiService) ConfigTemplatePagePost(ctx _context.Context, localVarOptionals *ConfigTemplatePagePostOpts) (PageConfigTemplatesRsp, *_nethttp.Response, error) {
+func (a *ConfigTemplateApiService) PageConfigTemplate(ctx _context.Context, localVarOptionals *PageConfigTemplateOpts) (PageConfigTemplatesResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  PageConfigTemplatesRsp
+		localVarReturnValue  PageConfigTemplatesResponse
 	)
 
 	// create path and map variables
@@ -714,112 +805,21 @@ func (a *ConfigTemplateApiService) ConfigTemplatePagePost(ctx _context.Context, 
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-// ConfigTemplatePostOpts Optional parameters for the method 'ConfigTemplatePost'
-type ConfigTemplatePostOpts struct {
-    CreateConfigTemplateReq optional.Interface
-}
-
 /*
-ConfigTemplatePost 创建配置模版
-创建配置模版
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ConfigTemplatePostOpts - Optional Parameters:
- * @param "CreateConfigTemplateReq" (optional.Interface of CreateConfigTemplateReq) - 
-@return CreateConfigTemplateRsp
-*/
-func (a *ConfigTemplateApiService) ConfigTemplatePost(ctx _context.Context, localVarOptionals *ConfigTemplatePostOpts) (CreateConfigTemplateRsp, *_nethttp.Response, error) {
-	var (
-		localVarHTTPMethod   = _nethttp.MethodPost
-		localVarPostBody     interface{}
-		localVarFormFileName string
-		localVarFileName     string
-		localVarFileBytes    []byte
-		localVarReturnValue  CreateConfigTemplateRsp
-	)
-
-	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/configTemplate"
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := _neturl.Values{}
-	localVarFormParams := _neturl.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	if localVarOptionals != nil && localVarOptionals.CreateConfigTemplateReq.IsSet() {
-		localVarOptionalCreateConfigTemplateReq, localVarOptionalCreateConfigTemplateReqok := localVarOptionals.CreateConfigTemplateReq.Value().(CreateConfigTemplateReq)
-		if !localVarOptionalCreateConfigTemplateReqok {
-			return localVarReturnValue, nil, reportError("createConfigTemplateReq should be CreateConfigTemplateReq")
-		}
-		localVarPostBody = &localVarOptionalCreateConfigTemplateReq
-	}
-
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := _ioutil.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
-}
-
-/*
-ConfigTemplateRetrieveByKeyPost 查询配置模版
+RetrieveByKeyConfigTemplate 查询配置模版
 查询配置模版通过配置Key
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param key 主键Key
-@return RetrieveConfigTemplateByKeyRsp
+@return RetrieveConfigTemplateByKeyResponse
 */
-func (a *ConfigTemplateApiService) ConfigTemplateRetrieveByKeyPost(ctx _context.Context, key string) (RetrieveConfigTemplateByKeyRsp, *_nethttp.Response, error) {
+func (a *ConfigTemplateApiService) RetrieveByKeyConfigTemplate(ctx _context.Context, key string) (RetrieveConfigTemplateByKeyResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  RetrieveConfigTemplateByKeyRsp
+		localVarReturnValue  RetrieveConfigTemplateByKeyResponse
 	)
 
 	// create path and map variables

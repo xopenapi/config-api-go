@@ -26,27 +26,27 @@ var (
 // ConfigGroupApiService ConfigGroupApi service
 type ConfigGroupApiService service
 
-// ConfigGroupBatchDeletePostOpts Optional parameters for the method 'ConfigGroupBatchDeletePost'
-type ConfigGroupBatchDeletePostOpts struct {
+// BatchDeleteGroupsOpts Optional parameters for the method 'BatchDeleteGroups'
+type BatchDeleteGroupsOpts struct {
     IdsReq optional.Interface
 }
 
 /*
-ConfigGroupBatchDeletePost 批量删除组
+BatchDeleteGroups 批量删除组
 批量删除组通过组Id
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ConfigGroupBatchDeletePostOpts - Optional Parameters:
+ * @param optional nil or *BatchDeleteGroupsOpts - Optional Parameters:
  * @param "IdsReq" (optional.Interface of IdsReq) - 
-@return DeleteRsp
+@return DeleteResponse
 */
-func (a *ConfigGroupApiService) ConfigGroupBatchDeletePost(ctx _context.Context, localVarOptionals *ConfigGroupBatchDeletePostOpts) (DeleteRsp, *_nethttp.Response, error) {
+func (a *ConfigGroupApiService) BatchDeleteGroups(ctx _context.Context, localVarOptionals *BatchDeleteGroupsOpts) (DeleteResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  DeleteRsp
+		localVarReturnValue  DeleteResponse
 	)
 
 	// create path and map variables
@@ -117,27 +117,27 @@ func (a *ConfigGroupApiService) ConfigGroupBatchDeletePost(ctx _context.Context,
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-// ConfigGroupBatchRetrievePostOpts Optional parameters for the method 'ConfigGroupBatchRetrievePost'
-type ConfigGroupBatchRetrievePostOpts struct {
+// BatchRetrieveGroupsOpts Optional parameters for the method 'BatchRetrieveGroups'
+type BatchRetrieveGroupsOpts struct {
     IdsReq optional.Interface
 }
 
 /*
-ConfigGroupBatchRetrievePost 批量查询组
+BatchRetrieveGroups 批量查询组
 批量查询组通过组Id
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ConfigGroupBatchRetrievePostOpts - Optional Parameters:
+ * @param optional nil or *BatchRetrieveGroupsOpts - Optional Parameters:
  * @param "IdsReq" (optional.Interface of IdsReq) - 
-@return GetConfigGroupsRsp
+@return BatchRetrieveConfigGroupsResponse
 */
-func (a *ConfigGroupApiService) ConfigGroupBatchRetrievePost(ctx _context.Context, localVarOptionals *ConfigGroupBatchRetrievePostOpts) (GetConfigGroupsRsp, *_nethttp.Response, error) {
+func (a *ConfigGroupApiService) BatchRetrieveGroups(ctx _context.Context, localVarOptionals *BatchRetrieveGroupsOpts) (BatchRetrieveConfigGroupsResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  GetConfigGroupsRsp
+		localVarReturnValue  BatchRetrieveConfigGroupsResponse
 	)
 
 	// create path and map variables
@@ -208,27 +208,118 @@ func (a *ConfigGroupApiService) ConfigGroupBatchRetrievePost(ctx _context.Contex
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-// ConfigGroupCursorPostOpts Optional parameters for the method 'ConfigGroupCursorPost'
-type ConfigGroupCursorPostOpts struct {
-    CursorQuery optional.Interface
+// CreateGroupOpts Optional parameters for the method 'CreateGroup'
+type CreateGroupOpts struct {
+    CreateConfigGroupReq optional.Interface
 }
 
 /*
-ConfigGroupCursorPost Cursor查询组
-Cursor查询组
+CreateGroup 创建组
+创建组
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ConfigGroupCursorPostOpts - Optional Parameters:
- * @param "CursorQuery" (optional.Interface of CursorQuery) - 
-@return CursorConfigGroupsRsp
+ * @param optional nil or *CreateGroupOpts - Optional Parameters:
+ * @param "CreateConfigGroupReq" (optional.Interface of CreateConfigGroupReq) - 
+@return CreateConfigGroupResponse
 */
-func (a *ConfigGroupApiService) ConfigGroupCursorPost(ctx _context.Context, localVarOptionals *ConfigGroupCursorPostOpts) (CursorConfigGroupsRsp, *_nethttp.Response, error) {
+func (a *ConfigGroupApiService) CreateGroup(ctx _context.Context, localVarOptionals *CreateGroupOpts) (CreateConfigGroupResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  CursorConfigGroupsRsp
+		localVarReturnValue  CreateConfigGroupResponse
+	)
+
+	// create path and map variables
+	localVarPath := a.client.cfg.BasePath + "/configGroup"
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := _neturl.Values{}
+	localVarFormParams := _neturl.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	if localVarOptionals != nil && localVarOptionals.CreateConfigGroupReq.IsSet() {
+		localVarOptionalCreateConfigGroupReq, localVarOptionalCreateConfigGroupReqok := localVarOptionals.CreateConfigGroupReq.Value().(CreateConfigGroupReq)
+		if !localVarOptionalCreateConfigGroupReqok {
+			return localVarReturnValue, nil, reportError("createConfigGroupReq should be CreateConfigGroupReq")
+		}
+		localVarPostBody = &localVarOptionalCreateConfigGroupReq
+	}
+
+	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(r)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := _ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+// CursorGroupsOpts Optional parameters for the method 'CursorGroups'
+type CursorGroupsOpts struct {
+    CursorQuery optional.Interface
+}
+
+/*
+CursorGroups Cursor查询组
+Cursor查询组
+ * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param optional nil or *CursorGroupsOpts - Optional Parameters:
+ * @param "CursorQuery" (optional.Interface of CursorQuery) - 
+@return CursorConfigGroupsResponse
+*/
+func (a *ConfigGroupApiService) CursorGroups(ctx _context.Context, localVarOptionals *CursorGroupsOpts) (CursorConfigGroupsResponse, *_nethttp.Response, error) {
+	var (
+		localVarHTTPMethod   = _nethttp.MethodPost
+		localVarPostBody     interface{}
+		localVarFormFileName string
+		localVarFileName     string
+		localVarFileBytes    []byte
+		localVarReturnValue  CursorConfigGroupsResponse
 	)
 
 	// create path and map variables
@@ -300,20 +391,20 @@ func (a *ConfigGroupApiService) ConfigGroupCursorPost(ctx _context.Context, loca
 }
 
 /*
-ConfigGroupIdDelete 删除组
+DeleteGroup 删除组
 删除组
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id 删除组
-@return DeleteRsp
+@return DeleteResponse
 */
-func (a *ConfigGroupApiService) ConfigGroupIdDelete(ctx _context.Context, id string) (DeleteRsp, *_nethttp.Response, error) {
+func (a *ConfigGroupApiService) DeleteGroup(ctx _context.Context, id string) (DeleteResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodDelete
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  DeleteRsp
+		localVarReturnValue  DeleteResponse
 	)
 
 	// create path and map variables
@@ -378,20 +469,20 @@ func (a *ConfigGroupApiService) ConfigGroupIdDelete(ctx _context.Context, id str
 }
 
 /*
-ConfigGroupIdGet 查询组
+GetGroup 查询组
 查询组通过组ID
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id 查询组通过组ID
-@return GetConfigGroupRsp
+@return GetConfigGroupResponse
 */
-func (a *ConfigGroupApiService) ConfigGroupIdGet(ctx _context.Context, id string) (GetConfigGroupRsp, *_nethttp.Response, error) {
+func (a *ConfigGroupApiService) GetGroup(ctx _context.Context, id string) (GetConfigGroupResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  GetConfigGroupRsp
+		localVarReturnValue  GetConfigGroupResponse
 	)
 
 	// create path and map variables
@@ -455,27 +546,27 @@ func (a *ConfigGroupApiService) ConfigGroupIdGet(ctx _context.Context, id string
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-// ConfigGroupPagePostOpts Optional parameters for the method 'ConfigGroupPagePost'
-type ConfigGroupPagePostOpts struct {
+// PageGroupsOpts Optional parameters for the method 'PageGroups'
+type PageGroupsOpts struct {
     PageQuery optional.Interface
 }
 
 /*
-ConfigGroupPagePost Page查询组
+PageGroups Page查询组
 Page查询组
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ConfigGroupPagePostOpts - Optional Parameters:
+ * @param optional nil or *PageGroupsOpts - Optional Parameters:
  * @param "PageQuery" (optional.Interface of PageQuery) - 
-@return PageConfigGroupsRsp
+@return PageConfigGroupsResponse
 */
-func (a *ConfigGroupApiService) ConfigGroupPagePost(ctx _context.Context, localVarOptionals *ConfigGroupPagePostOpts) (PageConfigGroupsRsp, *_nethttp.Response, error) {
+func (a *ConfigGroupApiService) PageGroups(ctx _context.Context, localVarOptionals *PageGroupsOpts) (PageConfigGroupsResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  PageConfigGroupsRsp
+		localVarReturnValue  PageConfigGroupsResponse
 	)
 
 	// create path and map variables
@@ -546,37 +637,32 @@ func (a *ConfigGroupApiService) ConfigGroupPagePost(ctx _context.Context, localV
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-// ConfigGroupPostOpts Optional parameters for the method 'ConfigGroupPost'
-type ConfigGroupPostOpts struct {
-    CreateConfigGroupReq optional.Interface
-}
-
 /*
-ConfigGroupPost 创建组
-创建组
+RetrieveByNameGroup 查询组
+查询组通过Name
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ConfigGroupPostOpts - Optional Parameters:
- * @param "CreateConfigGroupReq" (optional.Interface of CreateConfigGroupReq) - 
-@return CreateConfigGroupRsp
+ * @param name 查询组通过Name
+@return RetrieveConfigGroupByNameResponse
 */
-func (a *ConfigGroupApiService) ConfigGroupPost(ctx _context.Context, localVarOptionals *ConfigGroupPostOpts) (CreateConfigGroupRsp, *_nethttp.Response, error) {
+func (a *ConfigGroupApiService) RetrieveByNameGroup(ctx _context.Context, name string) (RetrieveConfigGroupByNameResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  CreateConfigGroupRsp
+		localVarReturnValue  RetrieveConfigGroupByNameResponse
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/configGroup"
+	localVarPath := a.client.cfg.BasePath + "/configGroup/retrieveByName"
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := _neturl.Values{}
 	localVarFormParams := _neturl.Values{}
 
+	localVarQueryParams.Add("name", parameterToString(name, ""))
 	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
+	localVarHTTPContentTypes := []string{}
 
 	// set Content-Type header
 	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
@@ -592,15 +678,6 @@ func (a *ConfigGroupApiService) ConfigGroupPost(ctx _context.Context, localVarOp
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-	// body params
-	if localVarOptionals != nil && localVarOptionals.CreateConfigGroupReq.IsSet() {
-		localVarOptionalCreateConfigGroupReq, localVarOptionalCreateConfigGroupReqok := localVarOptionals.CreateConfigGroupReq.Value().(CreateConfigGroupReq)
-		if !localVarOptionalCreateConfigGroupReqok {
-			return localVarReturnValue, nil, reportError("createConfigGroupReq should be CreateConfigGroupReq")
-		}
-		localVarPostBody = &localVarOptionalCreateConfigGroupReq
-	}
-
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -637,27 +714,27 @@ func (a *ConfigGroupApiService) ConfigGroupPost(ctx _context.Context, localVarOp
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-// ConfigGroupPutOpts Optional parameters for the method 'ConfigGroupPut'
-type ConfigGroupPutOpts struct {
+// UpdateGroupOpts Optional parameters for the method 'UpdateGroup'
+type UpdateGroupOpts struct {
     UpdateConfigGroupReq optional.Interface
 }
 
 /*
-ConfigGroupPut 更新组
+UpdateGroup 更新组
 更新组，需要全部的组信息
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ConfigGroupPutOpts - Optional Parameters:
+ * @param optional nil or *UpdateGroupOpts - Optional Parameters:
  * @param "UpdateConfigGroupReq" (optional.Interface of UpdateConfigGroupReq) - 
-@return UpdateConfigGroupRsp
+@return UpdateConfigGroupResponse
 */
-func (a *ConfigGroupApiService) ConfigGroupPut(ctx _context.Context, localVarOptionals *ConfigGroupPutOpts) (UpdateConfigGroupRsp, *_nethttp.Response, error) {
+func (a *ConfigGroupApiService) UpdateGroup(ctx _context.Context, localVarOptionals *UpdateGroupOpts) (UpdateConfigGroupResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPut
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  UpdateConfigGroupRsp
+		localVarReturnValue  UpdateConfigGroupResponse
 	)
 
 	// create path and map variables
@@ -692,83 +769,6 @@ func (a *ConfigGroupApiService) ConfigGroupPut(ctx _context.Context, localVarOpt
 		localVarPostBody = &localVarOptionalUpdateConfigGroupReq
 	}
 
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := _ioutil.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
-}
-
-/*
-ConfigGroupRetrieveByNamePost 查询组
-查询组通过Name
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param name 查询组通过Name
-@return RetrieveConfigGroupByNameRsp
-*/
-func (a *ConfigGroupApiService) ConfigGroupRetrieveByNamePost(ctx _context.Context, name string) (RetrieveConfigGroupByNameRsp, *_nethttp.Response, error) {
-	var (
-		localVarHTTPMethod   = _nethttp.MethodPost
-		localVarPostBody     interface{}
-		localVarFormFileName string
-		localVarFileName     string
-		localVarFileBytes    []byte
-		localVarReturnValue  RetrieveConfigGroupByNameRsp
-	)
-
-	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/configGroup/retrieveByName"
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := _neturl.Values{}
-	localVarFormParams := _neturl.Values{}
-
-	localVarQueryParams.Add("name", parameterToString(name, ""))
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err

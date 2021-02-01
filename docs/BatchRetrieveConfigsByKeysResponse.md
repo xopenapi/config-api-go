@@ -1,4 +1,4 @@
-# RetrieveConfigByKeyReq
+# BatchRetrieveConfigsByKeysResponse
 
 ## Properties
 

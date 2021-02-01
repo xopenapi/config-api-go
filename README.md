@@ -32,91 +32,92 @@ All URIs are relative to *https://api.lucfish.com/configuration/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ConfigApi* | [**ConfigBatchDeletePost**](docs/ConfigApi.md#configbatchdeletepost) | **Post** /config/batchDelete | 批量删除配置
-*ConfigApi* | [**ConfigBatchRetrieveByKeysPost**](docs/ConfigApi.md#configbatchretrievebykeyspost) | **Post** /config/batchRetrieveByKeys | 查询配置
-*ConfigApi* | [**ConfigBatchRetrieveByResourcesPost**](docs/ConfigApi.md#configbatchretrievebyresourcespost) | **Post** /config/batchRetrieveByResources | 查询配置
-*ConfigApi* | [**ConfigBatchRetrievePost**](docs/ConfigApi.md#configbatchretrievepost) | **Post** /config/batchRetrieve | 批量查询配置
-*ConfigApi* | [**ConfigCursorPost**](docs/ConfigApi.md#configcursorpost) | **Post** /config/cursor | Cursor查询配置
-*ConfigApi* | [**ConfigIdDelete**](docs/ConfigApi.md#configiddelete) | **Delete** /config/{id} | 删除配置
-*ConfigApi* | [**ConfigIdGet**](docs/ConfigApi.md#configidget) | **Get** /config/{id} | 查询配置
-*ConfigApi* | [**ConfigPagePost**](docs/ConfigApi.md#configpagepost) | **Post** /config/page | Page查询配置
-*ConfigApi* | [**ConfigPost**](docs/ConfigApi.md#configpost) | **Post** /config | 创建配置
-*ConfigApi* | [**ConfigPut**](docs/ConfigApi.md#configput) | **Put** /config | 更新配置
-*ConfigApi* | [**ConfigRetrieveByKeyPost**](docs/ConfigApi.md#configretrievebykeypost) | **Post** /config/retrieveByKey | 查询配置
-*ConfigApi* | [**ConfigTemplatePut**](docs/ConfigApi.md#configtemplateput) | **Put** /configTemplate | 更新配置模版
-*ConfigGroupApi* | [**ConfigGroupBatchDeletePost**](docs/ConfigGroupApi.md#configgroupbatchdeletepost) | **Post** /configGroup/batchDelete | 批量删除组
-*ConfigGroupApi* | [**ConfigGroupBatchRetrievePost**](docs/ConfigGroupApi.md#configgroupbatchretrievepost) | **Post** /configGroup/batchRetrieve | 批量查询组
-*ConfigGroupApi* | [**ConfigGroupCursorPost**](docs/ConfigGroupApi.md#configgroupcursorpost) | **Post** /configGroup/cursor | Cursor查询组
-*ConfigGroupApi* | [**ConfigGroupIdDelete**](docs/ConfigGroupApi.md#configgroupiddelete) | **Delete** /configGroup/{id} | 删除组
-*ConfigGroupApi* | [**ConfigGroupIdGet**](docs/ConfigGroupApi.md#configgroupidget) | **Get** /configGroup/{id} | 查询组
-*ConfigGroupApi* | [**ConfigGroupPagePost**](docs/ConfigGroupApi.md#configgrouppagepost) | **Post** /configGroup/page | Page查询组
-*ConfigGroupApi* | [**ConfigGroupPost**](docs/ConfigGroupApi.md#configgrouppost) | **Post** /configGroup | 创建组
-*ConfigGroupApi* | [**ConfigGroupPut**](docs/ConfigGroupApi.md#configgroupput) | **Put** /configGroup | 更新组
-*ConfigGroupApi* | [**ConfigGroupRetrieveByNamePost**](docs/ConfigGroupApi.md#configgroupretrievebynamepost) | **Post** /configGroup/retrieveByName | 查询组
-*ConfigTemplateApi* | [**ConfigTemplateBatchDeletePost**](docs/ConfigTemplateApi.md#configtemplatebatchdeletepost) | **Post** /configTemplate/batchDelete | 批量删除配置模版
-*ConfigTemplateApi* | [**ConfigTemplateBatchRetrieveByGroupPost**](docs/ConfigTemplateApi.md#configtemplatebatchretrievebygrouppost) | **Post** /configTemplate/batchRetrieveByGroup | 查询配置模版
-*ConfigTemplateApi* | [**ConfigTemplateBatchRetrieveByKeysPost**](docs/ConfigTemplateApi.md#configtemplatebatchretrievebykeyspost) | **Post** /configTemplate/batchRetrieveByKeys | 查询配置模版
-*ConfigTemplateApi* | [**ConfigTemplateBatchRetrievePost**](docs/ConfigTemplateApi.md#configtemplatebatchretrievepost) | **Post** /configTemplate/batchRetrieve | 批量查询配置模版
-*ConfigTemplateApi* | [**ConfigTemplateCursorPost**](docs/ConfigTemplateApi.md#configtemplatecursorpost) | **Post** /configTemplate/cursor | Cursor查询配置模版
-*ConfigTemplateApi* | [**ConfigTemplateIdDelete**](docs/ConfigTemplateApi.md#configtemplateiddelete) | **Delete** /configTemplate/{id} | 删除配置模版
-*ConfigTemplateApi* | [**ConfigTemplateIdGet**](docs/ConfigTemplateApi.md#configtemplateidget) | **Get** /configTemplate/{id} | 查询配置模版
-*ConfigTemplateApi* | [**ConfigTemplatePagePost**](docs/ConfigTemplateApi.md#configtemplatepagepost) | **Post** /configTemplate/page | Page查询配置模版
-*ConfigTemplateApi* | [**ConfigTemplatePost**](docs/ConfigTemplateApi.md#configtemplatepost) | **Post** /configTemplate | 创建配置模版
-*ConfigTemplateApi* | [**ConfigTemplateRetrieveByKeyPost**](docs/ConfigTemplateApi.md#configtemplateretrievebykeypost) | **Post** /configTemplate/retrieveByKey | 查询配置模版
+*ConfigApi* | [**BatchDeleteConfigs**](docs/ConfigApi.md#batchdeleteconfigs) | **Post** /config/batchDelete | 批量删除配置
+*ConfigApi* | [**BatchRetrieveByKeysConfigs**](docs/ConfigApi.md#batchretrievebykeysconfigs) | **Post** /config/batchRetrieveByKeys | 查询配置
+*ConfigApi* | [**BatchRetrieveByResourcesConfigs**](docs/ConfigApi.md#batchretrievebyresourcesconfigs) | **Post** /config/batchRetrieveByResources | 查询配置
+*ConfigApi* | [**BatchRetrieveConfigs**](docs/ConfigApi.md#batchretrieveconfigs) | **Post** /config/batchRetrieve | 批量查询配置
+*ConfigApi* | [**CreateConfig**](docs/ConfigApi.md#createconfig) | **Post** /config | 创建配置
+*ConfigApi* | [**CursorConfigs**](docs/ConfigApi.md#cursorconfigs) | **Post** /config/cursor | Cursor查询配置
+*ConfigApi* | [**DeleteConfig**](docs/ConfigApi.md#deleteconfig) | **Delete** /config/{id} | 删除配置
+*ConfigApi* | [**GetConfig**](docs/ConfigApi.md#getconfig) | **Get** /config/{id} | 查询配置
+*ConfigApi* | [**PageConfigs**](docs/ConfigApi.md#pageconfigs) | **Post** /config/page | Page查询配置
+*ConfigApi* | [**RetrieveByKeyConfig**](docs/ConfigApi.md#retrievebykeyconfig) | **Post** /config/retrieveByKey | 查询配置
+*ConfigApi* | [**UpdateConfig**](docs/ConfigApi.md#updateconfig) | **Put** /config | 更新配置
+*ConfigApi* | [**UpdateConfigTemplate**](docs/ConfigApi.md#updateconfigtemplate) | **Put** /configTemplate | 更新配置模版
+*ConfigGroupApi* | [**BatchDeleteGroups**](docs/ConfigGroupApi.md#batchdeletegroups) | **Post** /configGroup/batchDelete | 批量删除组
+*ConfigGroupApi* | [**BatchRetrieveGroups**](docs/ConfigGroupApi.md#batchretrievegroups) | **Post** /configGroup/batchRetrieve | 批量查询组
+*ConfigGroupApi* | [**CreateGroup**](docs/ConfigGroupApi.md#creategroup) | **Post** /configGroup | 创建组
+*ConfigGroupApi* | [**CursorGroups**](docs/ConfigGroupApi.md#cursorgroups) | **Post** /configGroup/cursor | Cursor查询组
+*ConfigGroupApi* | [**DeleteGroup**](docs/ConfigGroupApi.md#deletegroup) | **Delete** /configGroup/{id} | 删除组
+*ConfigGroupApi* | [**GetGroup**](docs/ConfigGroupApi.md#getgroup) | **Get** /configGroup/{id} | 查询组
+*ConfigGroupApi* | [**PageGroups**](docs/ConfigGroupApi.md#pagegroups) | **Post** /configGroup/page | Page查询组
+*ConfigGroupApi* | [**RetrieveByNameGroup**](docs/ConfigGroupApi.md#retrievebynamegroup) | **Post** /configGroup/retrieveByName | 查询组
+*ConfigGroupApi* | [**UpdateGroup**](docs/ConfigGroupApi.md#updategroup) | **Put** /configGroup | 更新组
+*ConfigTemplateApi* | [**BatchDeleteConfigTemplates**](docs/ConfigTemplateApi.md#batchdeleteconfigtemplates) | **Post** /configTemplate/batchDelete | 批量删除配置模版
+*ConfigTemplateApi* | [**BatchRetrieveByGroupConfigTemplates**](docs/ConfigTemplateApi.md#batchretrievebygroupconfigtemplates) | **Post** /configTemplate/batchRetrieveByGroup | 查询配置模版
+*ConfigTemplateApi* | [**BatchRetrieveByKeysConfigTemplates**](docs/ConfigTemplateApi.md#batchretrievebykeysconfigtemplates) | **Post** /configTemplate/batchRetrieveByKeys | 查询配置模版
+*ConfigTemplateApi* | [**BatchRetrieveConfigTemplates**](docs/ConfigTemplateApi.md#batchretrieveconfigtemplates) | **Post** /configTemplate/batchRetrieve | 批量查询配置模版
+*ConfigTemplateApi* | [**CreateConfigTemplate**](docs/ConfigTemplateApi.md#createconfigtemplate) | **Post** /configTemplate | 创建配置模版
+*ConfigTemplateApi* | [**CursorConfigTemplates**](docs/ConfigTemplateApi.md#cursorconfigtemplates) | **Post** /configTemplate/cursor | Cursor查询配置模版
+*ConfigTemplateApi* | [**DeleteConfigTemplate**](docs/ConfigTemplateApi.md#deleteconfigtemplate) | **Delete** /configTemplate/{id} | 删除配置模版
+*ConfigTemplateApi* | [**GetConfigTemplate**](docs/ConfigTemplateApi.md#getconfigtemplate) | **Get** /configTemplate/{id} | 查询配置模版
+*ConfigTemplateApi* | [**PageConfigTemplate**](docs/ConfigTemplateApi.md#pageconfigtemplate) | **Post** /configTemplate/page | Page查询配置模版
+*ConfigTemplateApi* | [**RetrieveByKeyConfigTemplate**](docs/ConfigTemplateApi.md#retrievebykeyconfigtemplate) | **Post** /configTemplate/retrieveByKey | 查询配置模版
 
 
 ## Documentation For Models
 
  - [BatchRetrieveByKeysReq](docs/BatchRetrieveByKeysReq.md)
  - [BatchRetrieveByResourcesReq](docs/BatchRetrieveByResourcesReq.md)
+ - [BatchRetrieveConfigGroupsResponse](docs/BatchRetrieveConfigGroupsResponse.md)
  - [BatchRetrieveConfigTemplateByKeysReq](docs/BatchRetrieveConfigTemplateByKeysReq.md)
- - [BatchRetrieveConfigTemplatesByGroupRsp](docs/BatchRetrieveConfigTemplatesByGroupRsp.md)
- - [BatchRetrieveConfigTemplatesByKeysRsp](docs/BatchRetrieveConfigTemplatesByKeysRsp.md)
- - [BatchRetrieveConfigTemplatesRsp](docs/BatchRetrieveConfigTemplatesRsp.md)
- - [BatchRetrieveConfigsByKeysRsp](docs/BatchRetrieveConfigsByKeysRsp.md)
- - [BatchRetrieveConfigsByResourcesRsp](docs/BatchRetrieveConfigsByResourcesRsp.md)
- - [BatchRetrieveConfigsRsp](docs/BatchRetrieveConfigsRsp.md)
+ - [BatchRetrieveConfigTemplateByKeysResponse](docs/BatchRetrieveConfigTemplateByKeysResponse.md)
+ - [BatchRetrieveConfigTemplatesByGroupResponse](docs/BatchRetrieveConfigTemplatesByGroupResponse.md)
+ - [BatchRetrieveConfigTemplatesByKeysResponse](docs/BatchRetrieveConfigTemplatesByKeysResponse.md)
+ - [BatchRetrieveConfigTemplatesResponse](docs/BatchRetrieveConfigTemplatesResponse.md)
+ - [BatchRetrieveConfigsByKeysResponse](docs/BatchRetrieveConfigsByKeysResponse.md)
+ - [BatchRetrieveConfigsByResourcesResponse](docs/BatchRetrieveConfigsByResourcesResponse.md)
+ - [BatchRetrieveConfigsResponse](docs/BatchRetrieveConfigsResponse.md)
  - [Config](docs/Config.md)
  - [ConfigGroup](docs/ConfigGroup.md)
  - [ConfigTemplate](docs/ConfigTemplate.md)
  - [CreateConfigGroupReq](docs/CreateConfigGroupReq.md)
- - [CreateConfigGroupRsp](docs/CreateConfigGroupRsp.md)
+ - [CreateConfigGroupResponse](docs/CreateConfigGroupResponse.md)
  - [CreateConfigReq](docs/CreateConfigReq.md)
- - [CreateConfigRsp](docs/CreateConfigRsp.md)
+ - [CreateConfigResponse](docs/CreateConfigResponse.md)
  - [CreateConfigTemplateReq](docs/CreateConfigTemplateReq.md)
- - [CreateConfigTemplateRsp](docs/CreateConfigTemplateRsp.md)
- - [CursorConfigGroupsRsp](docs/CursorConfigGroupsRsp.md)
- - [CursorConfigGroupsRspData](docs/CursorConfigGroupsRspData.md)
- - [CursorConfigTemplatesRsp](docs/CursorConfigTemplatesRsp.md)
- - [CursorConfigTemplatesRspData](docs/CursorConfigTemplatesRspData.md)
- - [CursorConfigsRsp](docs/CursorConfigsRsp.md)
- - [CursorConfigsRspData](docs/CursorConfigsRspData.md)
+ - [CreateConfigTemplateResponse](docs/CreateConfigTemplateResponse.md)
+ - [CursorConfigGroupsResponse](docs/CursorConfigGroupsResponse.md)
+ - [CursorConfigGroupsResponseData](docs/CursorConfigGroupsResponseData.md)
+ - [CursorConfigTemplatesResponse](docs/CursorConfigTemplatesResponse.md)
+ - [CursorConfigTemplatesResponseData](docs/CursorConfigTemplatesResponseData.md)
+ - [CursorConfigsResponse](docs/CursorConfigsResponse.md)
+ - [CursorConfigsResponseData](docs/CursorConfigsResponseData.md)
  - [CursorExtra](docs/CursorExtra.md)
  - [CursorQuery](docs/CursorQuery.md)
- - [DeleteRsp](docs/DeleteRsp.md)
- - [GetConfigGroupRsp](docs/GetConfigGroupRsp.md)
- - [GetConfigGroupsRsp](docs/GetConfigGroupsRsp.md)
- - [GetConfigRsp](docs/GetConfigRsp.md)
- - [GetConfigTemplateRsp](docs/GetConfigTemplateRsp.md)
+ - [DeleteResponse](docs/DeleteResponse.md)
+ - [GetConfigGroupResponse](docs/GetConfigGroupResponse.md)
+ - [GetConfigResponse](docs/GetConfigResponse.md)
+ - [GetConfigTemplateResponse](docs/GetConfigTemplateResponse.md)
  - [IdsReq](docs/IdsReq.md)
- - [PageConfigGroupsRsp](docs/PageConfigGroupsRsp.md)
- - [PageConfigGroupsRspData](docs/PageConfigGroupsRspData.md)
- - [PageConfigTemplatesRsp](docs/PageConfigTemplatesRsp.md)
- - [PageConfigTemplatesRspData](docs/PageConfigTemplatesRspData.md)
- - [PageConfigsRsp](docs/PageConfigsRsp.md)
- - [PageConfigsRspData](docs/PageConfigsRspData.md)
+ - [PageConfigGroupsResponse](docs/PageConfigGroupsResponse.md)
+ - [PageConfigGroupsResponseData](docs/PageConfigGroupsResponseData.md)
+ - [PageConfigTemplatesResponse](docs/PageConfigTemplatesResponse.md)
+ - [PageConfigTemplatesResponseData](docs/PageConfigTemplatesResponseData.md)
+ - [PageConfigsResponse](docs/PageConfigsResponse.md)
+ - [PageConfigsResponseData](docs/PageConfigsResponseData.md)
  - [PageQuery](docs/PageQuery.md)
  - [RetrieveConfigByKeyReq](docs/RetrieveConfigByKeyReq.md)
- - [RetrieveConfigByKeyRsp](docs/RetrieveConfigByKeyRsp.md)
- - [RetrieveConfigGroupByNameRsp](docs/RetrieveConfigGroupByNameRsp.md)
- - [RetrieveConfigTemplateByKeyRsp](docs/RetrieveConfigTemplateByKeyRsp.md)
+ - [RetrieveConfigByKeyResponse](docs/RetrieveConfigByKeyResponse.md)
+ - [RetrieveConfigGroupByNameResponse](docs/RetrieveConfigGroupByNameResponse.md)
+ - [RetrieveConfigTemplateByKeyResponse](docs/RetrieveConfigTemplateByKeyResponse.md)
  - [SortSpec](docs/SortSpec.md)
  - [UpdateConfigGroupReq](docs/UpdateConfigGroupReq.md)
- - [UpdateConfigGroupRsp](docs/UpdateConfigGroupRsp.md)
+ - [UpdateConfigGroupResponse](docs/UpdateConfigGroupResponse.md)
  - [UpdateConfigReq](docs/UpdateConfigReq.md)
- - [UpdateConfigRsp](docs/UpdateConfigRsp.md)
+ - [UpdateConfigResponse](docs/UpdateConfigResponse.md)
  - [UpdateConfigTemplateReq](docs/UpdateConfigTemplateReq.md)
- - [UpdateConfigTemplateRsp](docs/UpdateConfigTemplateRsp.md)
+ - [UpdateConfigTemplateResponse](docs/UpdateConfigTemplateResponse.md)
 
 
 ## Documentation For Authorization

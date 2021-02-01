@@ -8,9 +8,9 @@
  */
 
 package config
-// RetrieveConfigByKeyReq struct for RetrieveConfigByKeyReq
-type RetrieveConfigByKeyReq struct {
+// UpdateConfigTemplateResponse struct for UpdateConfigTemplateResponse
+type UpdateConfigTemplateResponse struct {
 	Code int64 `json:"code,omitempty"`
 	Msg string `json:"msg,omitempty"`
-	Data []Config `json:"data,omitempty"`
+	Data ConfigTemplate `json:"data,omitempty"`
 }

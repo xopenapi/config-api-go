@@ -8,8 +8,8 @@
  */
 
 package config
-// RetrieveConfigByKeyReq struct for RetrieveConfigByKeyReq
-type RetrieveConfigByKeyReq struct {
+// BatchRetrieveConfigsByResourcesResponse struct for BatchRetrieveConfigsByResourcesResponse
+type BatchRetrieveConfigsByResourcesResponse struct {
 	Code int64 `json:"code,omitempty"`
 	Msg string `json:"msg,omitempty"`
 	Data []Config `json:"data,omitempty"`

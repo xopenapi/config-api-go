@@ -4,21 +4,21 @@ All URIs are relative to *https://api.lucfish.com/configuration/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ConfigGroupBatchDeletePost**](ConfigGroupApi.md#ConfigGroupBatchDeletePost) | **Post** /configGroup/batchDelete | 批量删除组
-[**ConfigGroupBatchRetrievePost**](ConfigGroupApi.md#ConfigGroupBatchRetrievePost) | **Post** /configGroup/batchRetrieve | 批量查询组
-[**ConfigGroupCursorPost**](ConfigGroupApi.md#ConfigGroupCursorPost) | **Post** /configGroup/cursor | Cursor查询组
-[**ConfigGroupIdDelete**](ConfigGroupApi.md#ConfigGroupIdDelete) | **Delete** /configGroup/{id} | 删除组
-[**ConfigGroupIdGet**](ConfigGroupApi.md#ConfigGroupIdGet) | **Get** /configGroup/{id} | 查询组
-[**ConfigGroupPagePost**](ConfigGroupApi.md#ConfigGroupPagePost) | **Post** /configGroup/page | Page查询组
-[**ConfigGroupPost**](ConfigGroupApi.md#ConfigGroupPost) | **Post** /configGroup | 创建组
-[**ConfigGroupPut**](ConfigGroupApi.md#ConfigGroupPut) | **Put** /configGroup | 更新组
-[**ConfigGroupRetrieveByNamePost**](ConfigGroupApi.md#ConfigGroupRetrieveByNamePost) | **Post** /configGroup/retrieveByName | 查询组
+[**BatchDeleteGroups**](ConfigGroupApi.md#BatchDeleteGroups) | **Post** /configGroup/batchDelete | 批量删除组
+[**BatchRetrieveGroups**](ConfigGroupApi.md#BatchRetrieveGroups) | **Post** /configGroup/batchRetrieve | 批量查询组
+[**CreateGroup**](ConfigGroupApi.md#CreateGroup) | **Post** /configGroup | 创建组
+[**CursorGroups**](ConfigGroupApi.md#CursorGroups) | **Post** /configGroup/cursor | Cursor查询组
+[**DeleteGroup**](ConfigGroupApi.md#DeleteGroup) | **Delete** /configGroup/{id} | 删除组
+[**GetGroup**](ConfigGroupApi.md#GetGroup) | **Get** /configGroup/{id} | 查询组
+[**PageGroups**](ConfigGroupApi.md#PageGroups) | **Post** /configGroup/page | Page查询组
+[**RetrieveByNameGroup**](ConfigGroupApi.md#RetrieveByNameGroup) | **Post** /configGroup/retrieveByName | 查询组
+[**UpdateGroup**](ConfigGroupApi.md#UpdateGroup) | **Put** /configGroup | 更新组
 
 
 
-## ConfigGroupBatchDeletePost
+## BatchDeleteGroups
 
-> DeleteRsp ConfigGroupBatchDeletePost(ctx, optional)
+> DeleteResponse BatchDeleteGroups(ctx, optional)
 
 批量删除组
 
@@ -30,11 +30,11 @@ Method | HTTP request | Description
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ConfigGroupBatchDeletePostOpts** | optional parameters | nil if no parameters
+ **optional** | ***BatchDeleteGroupsOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a ConfigGroupBatchDeletePostOpts struct
+Optional parameters are passed through a pointer to a BatchDeleteGroupsOpts struct
 
 
 Name | Type | Description  | Notes
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteRsp**](DeleteRsp.md)
+[**DeleteResponse**](DeleteResponse.md)
 
 ### Authorization
 
@@ -59,9 +59,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## ConfigGroupBatchRetrievePost
+## BatchRetrieveGroups
 
-> GetConfigGroupsRsp ConfigGroupBatchRetrievePost(ctx, optional)
+> BatchRetrieveConfigGroupsResponse BatchRetrieveGroups(ctx, optional)
 
 批量查询组
 
@@ -73,11 +73,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ConfigGroupBatchRetrievePostOpts** | optional parameters | nil if no parameters
+ **optional** | ***BatchRetrieveGroupsOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a ConfigGroupBatchRetrievePostOpts struct
+Optional parameters are passed through a pointer to a BatchRetrieveGroupsOpts struct
 
 
 Name | Type | Description  | Notes
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetConfigGroupsRsp**](GetConfigGroupsRsp.md)
+[**BatchRetrieveConfigGroupsResponse**](BatchRetrieveConfigGroupsResponse.md)
 
 ### Authorization
 
@@ -102,9 +102,52 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## ConfigGroupCursorPost
+## CreateGroup
 
-> CursorConfigGroupsRsp ConfigGroupCursorPost(ctx, optional)
+> CreateConfigGroupResponse CreateGroup(ctx, optional)
+
+创建组
+
+创建组
+
+### Required Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+ **optional** | ***CreateGroupOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+
+Optional parameters are passed through a pointer to a CreateGroupOpts struct
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createConfigGroupReq** | [**optional.Interface of CreateConfigGroupReq**](CreateConfigGroupReq.md)|  | 
+
+### Return type
+
+[**CreateConfigGroupResponse**](CreateConfigGroupResponse.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CursorGroups
+
+> CursorConfigGroupsResponse CursorGroups(ctx, optional)
 
 Cursor查询组
 
@@ -116,11 +159,11 @@ Cursor查询组
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ConfigGroupCursorPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***CursorGroupsOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a ConfigGroupCursorPostOpts struct
+Optional parameters are passed through a pointer to a CursorGroupsOpts struct
 
 
 Name | Type | Description  | Notes
@@ -129,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CursorConfigGroupsRsp**](CursorConfigGroupsRsp.md)
+[**CursorConfigGroupsResponse**](CursorConfigGroupsResponse.md)
 
 ### Authorization
 
@@ -145,9 +188,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## ConfigGroupIdDelete
+## DeleteGroup
 
-> DeleteRsp ConfigGroupIdDelete(ctx, id)
+> DeleteResponse DeleteGroup(ctx, id)
 
 删除组
 
@@ -163,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteRsp**](DeleteRsp.md)
+[**DeleteResponse**](DeleteResponse.md)
 
 ### Authorization
 
@@ -179,9 +222,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## ConfigGroupIdGet
+## GetGroup
 
-> GetConfigGroupRsp ConfigGroupIdGet(ctx, id)
+> GetConfigGroupResponse GetGroup(ctx, id)
 
 查询组
 
@@ -197,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetConfigGroupRsp**](GetConfigGroupRsp.md)
+[**GetConfigGroupResponse**](GetConfigGroupResponse.md)
 
 ### Authorization
 
@@ -213,9 +256,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## ConfigGroupPagePost
+## PageGroups
 
-> PageConfigGroupsRsp ConfigGroupPagePost(ctx, optional)
+> PageConfigGroupsResponse PageGroups(ctx, optional)
 
 Page查询组
 
@@ -227,11 +270,11 @@ Page查询组
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ConfigGroupPagePostOpts** | optional parameters | nil if no parameters
+ **optional** | ***PageGroupsOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a ConfigGroupPagePostOpts struct
+Optional parameters are passed through a pointer to a PageGroupsOpts struct
 
 
 Name | Type | Description  | Notes
@@ -240,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageConfigGroupsRsp**](PageConfigGroupsRsp.md)
+[**PageConfigGroupsResponse**](PageConfigGroupsResponse.md)
 
 ### Authorization
 
@@ -256,95 +299,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## ConfigGroupPost
+## RetrieveByNameGroup
 
-> CreateConfigGroupRsp ConfigGroupPost(ctx, optional)
-
-创建组
-
-创建组
-
-### Required Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ConfigGroupPostOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-
-Optional parameters are passed through a pointer to a ConfigGroupPostOpts struct
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **createConfigGroupReq** | [**optional.Interface of CreateConfigGroupReq**](CreateConfigGroupReq.md)|  | 
-
-### Return type
-
-[**CreateConfigGroupRsp**](CreateConfigGroupRsp.md)
-
-### Authorization
-
-[ApiKey](../README.md#ApiKey)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## ConfigGroupPut
-
-> UpdateConfigGroupRsp ConfigGroupPut(ctx, optional)
-
-更新组
-
-更新组，需要全部的组信息
-
-### Required Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ConfigGroupPutOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-
-Optional parameters are passed through a pointer to a ConfigGroupPutOpts struct
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **updateConfigGroupReq** | [**optional.Interface of UpdateConfigGroupReq**](UpdateConfigGroupReq.md)|  | 
-
-### Return type
-
-[**UpdateConfigGroupRsp**](UpdateConfigGroupRsp.md)
-
-### Authorization
-
-[ApiKey](../README.md#ApiKey)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## ConfigGroupRetrieveByNamePost
-
-> RetrieveConfigGroupByNameRsp ConfigGroupRetrieveByNamePost(ctx, name)
+> RetrieveConfigGroupByNameResponse RetrieveByNameGroup(ctx, name)
 
 查询组
 
@@ -360,7 +317,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RetrieveConfigGroupByNameRsp**](RetrieveConfigGroupByNameRsp.md)
+[**RetrieveConfigGroupByNameResponse**](RetrieveConfigGroupByNameResponse.md)
 
 ### Authorization
 
@@ -369,6 +326,49 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateGroup
+
+> UpdateConfigGroupResponse UpdateGroup(ctx, optional)
+
+更新组
+
+更新组，需要全部的组信息
+
+### Required Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+ **optional** | ***UpdateGroupOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+
+Optional parameters are passed through a pointer to a UpdateGroupOpts struct
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **updateConfigGroupReq** | [**optional.Interface of UpdateConfigGroupReq**](UpdateConfigGroupReq.md)|  | 
+
+### Return type
+
+[**UpdateConfigGroupResponse**](UpdateConfigGroupResponse.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)

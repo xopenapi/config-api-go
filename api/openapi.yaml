@@ -14,6 +14,7 @@ paths:
   /config:
     post:
       description: 创建配置
+      operationId: createConfig
       requestBody:
         content:
           application/json:
@@ -24,7 +25,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreateConfigRsp'
+                $ref: '#/components/schemas/CreateConfigResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -33,6 +34,7 @@ paths:
       - Config
     put:
       description: 更新配置，需要全部的配置信息
+      operationId: updateConfig
       requestBody:
         content:
           application/json:
@@ -43,7 +45,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UpdateConfigRsp'
+                $ref: '#/components/schemas/UpdateConfigResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -53,6 +55,7 @@ paths:
   /config/{id}:
     delete:
       description: 删除配置
+      operationId: deleteConfig
       parameters:
       - description: 删除配置
         explode: false
@@ -68,7 +71,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DeleteRsp'
+                $ref: '#/components/schemas/DeleteResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -77,6 +80,7 @@ paths:
       - Config
     get:
       description: 查询配置通过配置ID
+      operationId: getConfig
       parameters:
       - description: 查询配置通过配置ID
         explode: false
@@ -92,7 +96,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetConfigRsp'
+                $ref: '#/components/schemas/GetConfigResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -102,6 +106,7 @@ paths:
   /config/batchRetrieve:
     post:
       description: 批量查询配置通过配置Id
+      operationId: batchRetrieveConfigs
       requestBody:
         content:
           application/json:
@@ -112,7 +117,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/BatchRetrieveConfigsRsp'
+                $ref: '#/components/schemas/BatchRetrieveConfigsResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -122,6 +127,7 @@ paths:
   /config/batchDelete:
     post:
       description: 批量删除配置通过配置Id
+      operationId: batchDeleteConfigs
       requestBody:
         content:
           application/json:
@@ -132,7 +138,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DeleteRsp'
+                $ref: '#/components/schemas/DeleteResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -142,6 +148,7 @@ paths:
   /config/page:
     post:
       description: Page查询配置
+      operationId: pageConfigs
       requestBody:
         content:
           application/json:
@@ -152,7 +159,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PageConfigsRsp'
+                $ref: '#/components/schemas/PageConfigsResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -162,6 +169,7 @@ paths:
   /config/cursor:
     post:
       description: Cursor查询配置
+      operationId: cursorConfigs
       requestBody:
         content:
           application/json:
@@ -172,7 +180,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CursorConfigsRsp'
+                $ref: '#/components/schemas/CursorConfigsResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -182,6 +190,7 @@ paths:
   /config/retrieveByKey:
     post:
       description: 查询配置通过配置Key和资源ID
+      operationId: retrieveByKeyConfig
       requestBody:
         content:
           application/json:
@@ -192,7 +201,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RetrieveConfigByKeyRsp'
+                $ref: '#/components/schemas/RetrieveConfigByKeyResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -202,6 +211,7 @@ paths:
   /config/batchRetrieveByKeys:
     post:
       description: 查询配置通过配置Keys和资源ID
+      operationId: batchRetrieveByKeysConfigs
       requestBody:
         content:
           application/json:
@@ -212,7 +222,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/BatchRetrieveConfigsByKeysRsp'
+                $ref: '#/components/schemas/BatchRetrieveConfigsByKeysResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -222,6 +232,7 @@ paths:
   /config/batchRetrieveByResources:
     post:
       description: 查询配置通过配置GroupID
+      operationId: batchRetrieveByResourcesConfigs
       requestBody:
         content:
           application/json:
@@ -232,7 +243,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/BatchRetrieveConfigsByResourcesRsp'
+                $ref: '#/components/schemas/BatchRetrieveConfigsByResourcesResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -242,6 +253,7 @@ paths:
   /configTemplate:
     post:
       description: 创建配置模版
+      operationId: createConfigTemplate
       requestBody:
         content:
           application/json:
@@ -252,7 +264,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreateConfigTemplateRsp'
+                $ref: '#/components/schemas/CreateConfigTemplateResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -261,6 +273,7 @@ paths:
       - ConfigTemplate
     put:
       description: 更新配置模版，需要全部的配置模版信息
+      operationId: updateConfigTemplate
       requestBody:
         content:
           application/json:
@@ -271,7 +284,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UpdateConfigTemplateRsp'
+                $ref: '#/components/schemas/UpdateConfigTemplateResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -281,6 +294,7 @@ paths:
   /configTemplate/{id}:
     delete:
       description: 删除配置模版
+      operationId: deleteConfigTemplate
       parameters:
       - description: 删除配置模版
         explode: false
@@ -296,7 +310,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DeleteRsp'
+                $ref: '#/components/schemas/DeleteResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -305,6 +319,7 @@ paths:
       - ConfigTemplate
     get:
       description: 查询配置通过配置模版ID
+      operationId: getConfigTemplate
       parameters:
       - description: 查询配置通过配置ID
         explode: false
@@ -320,7 +335,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetConfigTemplateRsp'
+                $ref: '#/components/schemas/GetConfigTemplateResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -330,6 +345,7 @@ paths:
   /configTemplate/batchRetrieve:
     post:
       description: 批量查询配置模版通过配置Id
+      operationId: batchRetrieveConfigTemplates
       requestBody:
         content:
           application/json:
@@ -340,7 +356,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/BatchRetrieveConfigTemplatesRsp'
+                $ref: '#/components/schemas/BatchRetrieveConfigTemplatesResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -350,6 +366,7 @@ paths:
   /configTemplate/batchDelete:
     post:
       description: 批量删除配置模版通过配置Id
+      operationId: batchDeleteConfigTemplates
       requestBody:
         content:
           application/json:
@@ -360,7 +377,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DeleteRsp'
+                $ref: '#/components/schemas/DeleteResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -370,6 +387,7 @@ paths:
   /configTemplate/page:
     post:
       description: Page查询配置模版
+      operationId: pageConfigTemplate
       requestBody:
         content:
           application/json:
@@ -380,7 +398,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PageConfigTemplatesRsp'
+                $ref: '#/components/schemas/PageConfigTemplatesResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -390,6 +408,7 @@ paths:
   /configTemplate/cursor:
     post:
       description: Cursor查询配置模版
+      operationId: cursorConfigTemplates
       requestBody:
         content:
           application/json:
@@ -400,7 +419,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CursorConfigTemplatesRsp'
+                $ref: '#/components/schemas/CursorConfigTemplatesResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -410,6 +429,7 @@ paths:
   /configTemplate/retrieveByKey:
     post:
       description: 查询配置模版通过配置Key
+      operationId: retrieveByKeyConfigTemplate
       parameters:
       - description: 主键Key
         explode: true
@@ -425,7 +445,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RetrieveConfigTemplateByKeyRsp'
+                $ref: '#/components/schemas/RetrieveConfigTemplateByKeyResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -435,6 +455,7 @@ paths:
   /configTemplate/batchRetrieveByKeys:
     post:
       description: 查询配置通过配置Keys
+      operationId: batchRetrieveByKeysConfigTemplates
       requestBody:
         content:
           application/json:
@@ -445,7 +466,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/BatchRetrieveConfigTemplatesByKeysRsp'
+                $ref: '#/components/schemas/BatchRetrieveConfigTemplatesByKeysResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -455,6 +476,7 @@ paths:
   /configTemplate/batchRetrieveByGroup:
     post:
       description: 查询配置模版通过配置模版GroupID
+      operationId: batchRetrieveByGroupConfigTemplates
       parameters:
       - description: 分组标签名
         explode: true
@@ -470,7 +492,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/BatchRetrieveConfigTemplatesByGroupRsp'
+                $ref: '#/components/schemas/BatchRetrieveConfigTemplatesByGroupResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -480,6 +502,7 @@ paths:
   /configGroup:
     post:
       description: 创建组
+      operationId: createGroup
       requestBody:
         content:
           application/json:
@@ -490,7 +513,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreateConfigGroupRsp'
+                $ref: '#/components/schemas/CreateConfigGroupResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -499,6 +522,7 @@ paths:
       - ConfigGroup
     put:
       description: 更新组，需要全部的组信息
+      operationId: updateGroup
       requestBody:
         content:
           application/json:
@@ -509,7 +533,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UpdateConfigGroupRsp'
+                $ref: '#/components/schemas/UpdateConfigGroupResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -519,6 +543,7 @@ paths:
   /configGroup/{id}:
     delete:
       description: 删除组
+      operationId: deleteGroup
       parameters:
       - description: 删除组
         explode: false
@@ -534,7 +559,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DeleteRsp'
+                $ref: '#/components/schemas/DeleteResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -543,6 +568,7 @@ paths:
       - ConfigGroup
     get:
       description: 查询组通过组ID
+      operationId: getGroup
       parameters:
       - description: 查询组通过组ID
         explode: false
@@ -558,7 +584,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetConfigGroupRsp'
+                $ref: '#/components/schemas/GetConfigGroupResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -568,6 +594,7 @@ paths:
   /configGroup/batchRetrieve:
     post:
       description: 批量查询组通过组Id
+      operationId: batchRetrieveGroups
       requestBody:
         content:
           application/json:
@@ -578,7 +605,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetConfigGroupsRsp'
+                $ref: '#/components/schemas/BatchRetrieveConfigGroupsResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -588,6 +615,7 @@ paths:
   /configGroup/batchDelete:
     post:
       description: 批量删除组通过组Id
+      operationId: batchDeleteGroups
       requestBody:
         content:
           application/json:
@@ -598,7 +626,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DeleteRsp'
+                $ref: '#/components/schemas/DeleteResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -608,6 +636,7 @@ paths:
   /configGroup/page:
     post:
       description: Page查询组
+      operationId: pageGroups
       requestBody:
         content:
           application/json:
@@ -618,7 +647,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PageConfigGroupsRsp'
+                $ref: '#/components/schemas/PageConfigGroupsResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -628,6 +657,7 @@ paths:
   /configGroup/cursor:
     post:
       description: Cursor查询组
+      operationId: cursorGroups
       requestBody:
         content:
           application/json:
@@ -638,7 +668,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CursorConfigGroupsRsp'
+                $ref: '#/components/schemas/CursorConfigGroupsResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -648,6 +678,7 @@ paths:
   /configGroup/retrieveByName:
     post:
       description: 查询组通过Name
+      operationId: retrieveByNameGroup
       parameters:
       - description: 查询组通过Name
         explode: true
@@ -663,7 +694,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RetrieveConfigGroupByNameRsp'
+                $ref: '#/components/schemas/RetrieveConfigGroupByNameResponse'
           description: successful operation
         "405":
           description: Invalid input
@@ -685,19 +716,74 @@ components:
             type: string
           type: array
       type: object
+    BatchRetrieveConfigsResponse:
+      example:
+        ids:
+        - ids
+        - ids
+      properties:
+        ids:
+          description: 配置ID列表
+          items:
+            format: string
+            type: string
+          type: array
+      type: object
     RetrieveConfigByKeyReq:
       example:
-        resourceId: resourceId
-        key: key
+        msg: msg
+        code: 0
+        data:
+        - resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+        - resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
       properties:
-        key:
-          description: key
+        code:
+          format: int64
+          type: integer
+        msg:
           format: string
           type: string
-        resourceId:
-          description: 资源ID
+        data:
+          items:
+            $ref: '#/components/schemas/Config'
+          type: array
+      type: object
+    RetrieveConfigByKeyResponse:
+      example:
+        msg: msg
+        code: 0
+        data:
+          resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
           format: string
           type: string
+        data:
+          $ref: '#/components/schemas/Config'
       type: object
     BatchRetrieveByKeysReq:
       example:
@@ -716,6 +802,39 @@ components:
           format: string
           type: string
       type: object
+    BatchRetrieveConfigsByKeysResponse:
+      example:
+        msg: msg
+        code: 0
+        data:
+        - resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+        - resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          items:
+            $ref: '#/components/schemas/Config'
+          type: array
+      type: object
     BatchRetrieveByResourcesReq:
       example:
         key: key
@@ -733,11 +852,51 @@ components:
             type: string
           type: array
       type: object
+    BatchRetrieveConfigsByResourcesResponse:
+      example:
+        msg: msg
+        code: 0
+        data:
+        - resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+        - resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          items:
+            $ref: '#/components/schemas/Config'
+          type: array
+      type: object
     BatchRetrieveConfigTemplateByKeysReq:
       example:
         keys:
         - keys
         - keys
+      properties:
+        keys:
+          items:
+            type: string
+          type: array
+      type: object
+    BatchRetrieveConfigTemplateByKeysResponse:
       properties:
         keys:
           items:
@@ -817,6 +976,29 @@ components:
           description: json格式的键值对数据
           type: object
       type: object
+    CreateConfigResponse:
+      example:
+        msg: msg
+        code: 0
+        data:
+          resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/Config'
+      type: object
     UpdateConfigReq:
       example:
         id: id
@@ -830,7 +1012,7 @@ components:
           description: json格式的键值对数据
           type: object
       type: object
-    CreateConfigRsp:
+    UpdateConfigResponse:
       example:
         msg: msg
         code: 0
@@ -853,7 +1035,7 @@ components:
         data:
           $ref: '#/components/schemas/Config'
       type: object
-    UpdateConfigRsp:
+    GetConfigResponse:
       example:
         msg: msg
         code: 0
@@ -876,96 +1058,7 @@ components:
         data:
           $ref: '#/components/schemas/Config'
       type: object
-    GetConfigRsp:
-      example:
-        msg: msg
-        code: 0
-        data:
-          resourceId: resourceId
-          groupId: groupId
-          ctime: 6
-          id: id
-          templateId: templateId
-          mtime: 1
-          value: '{}'
-          key: key
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          $ref: '#/components/schemas/Config'
-      type: object
-    BatchRetrieveConfigsRsp:
-      example:
-        msg: msg
-        code: 0
-        data:
-        - resourceId: resourceId
-          groupId: groupId
-          ctime: 6
-          id: id
-          templateId: templateId
-          mtime: 1
-          value: '{}'
-          key: key
-        - resourceId: resourceId
-          groupId: groupId
-          ctime: 6
-          id: id
-          templateId: templateId
-          mtime: 1
-          value: '{}'
-          key: key
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          items:
-            $ref: '#/components/schemas/Config'
-          type: array
-      type: object
-    BatchRetrieveConfigsByResourcesRsp:
-      example:
-        msg: msg
-        code: 0
-        data:
-        - resourceId: resourceId
-          groupId: groupId
-          ctime: 6
-          id: id
-          templateId: templateId
-          mtime: 1
-          value: '{}'
-          key: key
-        - resourceId: resourceId
-          groupId: groupId
-          ctime: 6
-          id: id
-          templateId: templateId
-          mtime: 1
-          value: '{}'
-          key: key
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          items:
-            $ref: '#/components/schemas/Config'
-          type: array
-      type: object
-    PageConfigsRsp:
+    PageConfigsResponse:
       example:
         msg: msg
         code: 0
@@ -999,9 +1092,9 @@ components:
           format: string
           type: string
         data:
-          $ref: '#/components/schemas/PageConfigsRsp_data'
+          $ref: '#/components/schemas/PageConfigsResponse_data'
       type: object
-    CursorConfigsRsp:
+    CursorConfigsResponse:
       example:
         msg: msg
         code: 0
@@ -1035,63 +1128,7 @@ components:
           format: string
           type: string
         data:
-          $ref: '#/components/schemas/CursorConfigsRsp_data'
-      type: object
-    RetrieveConfigByKeyRsp:
-      example:
-        msg: msg
-        code: 0
-        data:
-          resourceId: resourceId
-          groupId: groupId
-          ctime: 6
-          id: id
-          templateId: templateId
-          mtime: 1
-          value: '{}'
-          key: key
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          $ref: '#/components/schemas/Config'
-      type: object
-    BatchRetrieveConfigsByKeysRsp:
-      example:
-        msg: msg
-        code: 0
-        data:
-        - resourceId: resourceId
-          groupId: groupId
-          ctime: 6
-          id: id
-          templateId: templateId
-          mtime: 1
-          value: '{}'
-          key: key
-        - resourceId: resourceId
-          groupId: groupId
-          ctime: 6
-          id: id
-          templateId: templateId
-          mtime: 1
-          value: '{}'
-          key: key
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          items:
-            $ref: '#/components/schemas/Config'
-          type: array
+          $ref: '#/components/schemas/CursorConfigsResponse_data'
       type: object
     Config:
       example:
@@ -1145,6 +1182,25 @@ components:
           format: string
           type: string
       type: object
+    CreateConfigGroupResponse:
+      example:
+        msg: msg
+        code: 0
+        data:
+          name: name
+          ctime: 6
+          id: id
+          mtime: 1
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/ConfigGroup'
+      type: object
     UpdateConfigGroupReq:
       example:
         name: name
@@ -1158,7 +1214,7 @@ components:
           description: 名称
           type: string
       type: object
-    CreateConfigGroupRsp:
+    UpdateConfigGroupResponse:
       example:
         msg: msg
         code: 0
@@ -1177,7 +1233,7 @@ components:
         data:
           $ref: '#/components/schemas/ConfigGroup'
       type: object
-    UpdateConfigGroupRsp:
+    GetConfigGroupResponse:
       example:
         msg: msg
         code: 0
@@ -1196,26 +1252,7 @@ components:
         data:
           $ref: '#/components/schemas/ConfigGroup'
       type: object
-    GetConfigGroupRsp:
-      example:
-        msg: msg
-        code: 0
-        data:
-          name: name
-          ctime: 6
-          id: id
-          mtime: 1
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          $ref: '#/components/schemas/ConfigGroup'
-      type: object
-    GetConfigGroupsRsp:
+    BatchRetrieveConfigGroupsResponse:
       example:
         msg: msg
         code: 0
@@ -1240,7 +1277,7 @@ components:
             $ref: '#/components/schemas/ConfigGroup'
           type: array
       type: object
-    PageConfigGroupsRsp:
+    PageConfigGroupsResponse:
       example:
         msg: msg
         code: 0
@@ -1266,9 +1303,9 @@ components:
           format: string
           type: string
         data:
-          $ref: '#/components/schemas/PageConfigGroupsRsp_data'
+          $ref: '#/components/schemas/PageConfigGroupsResponse_data'
       type: object
-    CursorConfigGroupsRsp:
+    CursorConfigGroupsResponse:
       example:
         msg: msg
         code: 0
@@ -1294,9 +1331,9 @@ components:
           format: string
           type: string
         data:
-          $ref: '#/components/schemas/CursorConfigGroupsRsp_data'
+          $ref: '#/components/schemas/CursorConfigGroupsResponse_data'
       type: object
-    RetrieveConfigGroupByNameRsp:
+    RetrieveConfigGroupByNameResponse:
       example:
         msg: msg
         code: 0
@@ -1362,6 +1399,28 @@ components:
           description: json格式的键值对数据
           type: object
       type: object
+    CreateConfigTemplateResponse:
+      example:
+        msg: msg
+        code: 0
+        data:
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/ConfigTemplate'
+      type: object
     UpdateConfigTemplateReq:
       example:
         id: id
@@ -1375,7 +1434,7 @@ components:
           description: json格式的键值对数据
           type: object
       type: object
-    CreateConfigTemplateRsp:
+    UpdateConfigTemplateResponse:
       example:
         msg: msg
         code: 0
@@ -1397,7 +1456,7 @@ components:
         data:
           $ref: '#/components/schemas/ConfigTemplate'
       type: object
-    UpdateConfigTemplateRsp:
+    GetConfigTemplateResponse:
       example:
         msg: msg
         code: 0
@@ -1419,29 +1478,7 @@ components:
         data:
           $ref: '#/components/schemas/ConfigTemplate'
       type: object
-    GetConfigTemplateRsp:
-      example:
-        msg: msg
-        code: 0
-        data:
-          groupId: groupId
-          ctime: 6
-          id: id
-          templateId: templateId
-          mtime: 1
-          value: '{}'
-          key: key
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          $ref: '#/components/schemas/ConfigTemplate'
-      type: object
-    BatchRetrieveConfigTemplatesRsp:
+    BatchRetrieveConfigTemplatesResponse:
       example:
         msg: msg
         code: 0
@@ -1472,7 +1509,7 @@ components:
             $ref: '#/components/schemas/ConfigTemplate'
           type: array
       type: object
-    PageConfigTemplatesRsp:
+    PageConfigTemplatesResponse:
       example:
         msg: msg
         code: 0
@@ -1504,9 +1541,9 @@ components:
           format: string
           type: string
         data:
-          $ref: '#/components/schemas/PageConfigTemplatesRsp_data'
+          $ref: '#/components/schemas/PageConfigTemplatesResponse_data'
       type: object
-    CursorConfigTemplatesRsp:
+    CursorConfigTemplatesResponse:
       example:
         msg: msg
         code: 0
@@ -1538,9 +1575,9 @@ components:
           format: string
           type: string
         data:
-          $ref: '#/components/schemas/CursorConfigTemplatesRsp_data'
+          $ref: '#/components/schemas/CursorConfigTemplatesResponse_data'
       type: object
-    RetrieveConfigTemplateByKeyRsp:
+    RetrieveConfigTemplateByKeyResponse:
       example:
         msg: msg
         code: 0
@@ -1562,7 +1599,7 @@ components:
         data:
           $ref: '#/components/schemas/ConfigTemplate'
       type: object
-    BatchRetrieveConfigTemplatesByKeysRsp:
+    BatchRetrieveConfigTemplatesByKeysResponse:
       example:
         msg: msg
         code: 0
@@ -1593,7 +1630,7 @@ components:
             $ref: '#/components/schemas/ConfigTemplate'
           type: array
       type: object
-    BatchRetrieveConfigTemplatesByGroupRsp:
+    BatchRetrieveConfigTemplatesByGroupResponse:
       example:
         msg: msg
         code: 0
@@ -1662,21 +1699,6 @@ components:
           format: int64
           type: integer
       type: object
-    DeleteRsp:
-      example:
-        msg: msg
-        code: 0
-        data: ""
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          description: 暂时未返回数据
-      type: object
     PageQuery:
       example:
         pageNo: 0
@@ -1726,7 +1748,22 @@ components:
           format: string
           type: string
       type: object
-    PageConfigsRsp_data:
+    DeleteResponse:
+      example:
+        msg: msg
+        code: 0
+        data: ""
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          description: 暂时未返回数据
+      type: object
+    PageConfigsResponse_data:
       example:
         pageCount: 5
         total: 5
@@ -1770,7 +1807,7 @@ components:
           items:
             $ref: '#/components/schemas/Config'
           type: array
-    CursorConfigsRsp_data:
+    CursorConfigsResponse_data:
       example:
         extra:
           resourceId: resourceId
@@ -1800,7 +1837,7 @@ components:
           items:
             $ref: '#/components/schemas/Config'
           type: array
-    PageConfigGroupsRsp_data:
+    PageConfigGroupsResponse_data:
       example:
         pageCount: 5
         total: 5
@@ -1836,7 +1873,7 @@ components:
           items:
             $ref: '#/components/schemas/ConfigGroup'
           type: array
-    CursorConfigGroupsRsp_data:
+    CursorConfigGroupsResponse_data:
       example:
         extra:
           resourceId: resourceId
@@ -1858,7 +1895,7 @@ components:
           items:
             $ref: '#/components/schemas/ConfigGroup'
           type: array
-    PageConfigTemplatesRsp_data:
+    PageConfigTemplatesResponse_data:
       example:
         pageCount: 5
         total: 5
@@ -1900,7 +1937,7 @@ components:
           items:
             $ref: '#/components/schemas/ConfigTemplate'
           type: array
-    CursorConfigTemplatesRsp_data:
+    CursorConfigTemplatesResponse_data:
       example:
         extra:
           resourceId: resourceId

@@ -8,9 +8,9 @@
  */
 
 package config
-// RetrieveConfigByKeyReq struct for RetrieveConfigByKeyReq
-type RetrieveConfigByKeyReq struct {
+// CursorConfigGroupsResponse struct for CursorConfigGroupsResponse
+type CursorConfigGroupsResponse struct {
 	Code int64 `json:"code,omitempty"`
 	Msg string `json:"msg,omitempty"`
-	Data []Config `json:"data,omitempty"`
+	Data CursorConfigGroupsResponseData `json:"data,omitempty"`
 }

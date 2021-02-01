@@ -8,9 +8,9 @@
  */
 
 package config
-// RetrieveConfigByKeyReq struct for RetrieveConfigByKeyReq
-type RetrieveConfigByKeyReq struct {
+// PageConfigGroupsResponse struct for PageConfigGroupsResponse
+type PageConfigGroupsResponse struct {
 	Code int64 `json:"code,omitempty"`
 	Msg string `json:"msg,omitempty"`
-	Data []Config `json:"data,omitempty"`
+	Data PageConfigGroupsResponseData `json:"data,omitempty"`
 }
